@@ -32,22 +32,26 @@ export default {
     <h1>
       <div style="margin-left: 10px">
         <img src="public/Logos/LogoSolo.png" alt="LogoSolo"
-             style="position: absolute; top: 0vh; left: 0vw; width: 100px; height: auto; background-color: #E07B39; border-radius: 7px; padding: 1rem; z-index: 2" />
+             style="position: absolute; top: 0vh; left: 0vw; width: 75px; height: auto; background-color: var(--sidebar-bg-color); border-radius: 7px; padding: 10px; z-index: 2"
+             class="{ 'slide-in-enter-active': !collapsed }"
+        />
       </div>
 
       <transition name="slide-in">
         <div v-if="!collapsed" class="animated-title">
-          <h2>Jasons<br />Seite</h2>
+          <div style="margin-left: 10px">
+
+          </div>
         </div>
       </transition>
     </h1>
 
     <SidebarLink to="/" icon="fas fa-home">Homespace</SidebarLink>
-    <SidebarLink to="/Radio" icon="fas fa-radio">Test</SidebarLink>
+    <SidebarLink to="/radio" icon="fas fa-radio">Radio</SidebarLink>
+    <SidebarLink to="/terminal" icon="fas fa-terminal">Arduino Projekte</SidebarLink>
     <SidebarLink to="/wetter" icon="fas fa-cloud-bolt">Wetter</SidebarLink>
     <SidebarLink to="/banane" icon="fas fa-message">Bananentalk</SidebarLink>
-    <SidebarLink to="/frosch" icon="fas fa-frog">Der Frosch</SidebarLink>
-    <SidebarLink to="/images" icon="fas fa-image">Bilder</SidebarLink>
+    <SidebarLink to="/shop2" icon="fas fa-shop">Shop</SidebarLink>
 
     <span
         class="collapse-icon"
@@ -64,9 +68,9 @@ export default {
 
 <style>
 :root {
-  --sidebar-bg-color: #E07B39;
-  --sidebar-item-hover: #D68A3A;
-  --sidebar-item-active: #B55F2B;
+  --sidebar-bg-color: var(--color-background);
+  --sidebar-item-hover: var(--color-hover);
+  --sidebar-item-active: var(--color-active);
 }
 </style>
 
@@ -74,6 +78,7 @@ export default {
 .sidebar {
   color: white;
   background-color: var(--sidebar-bg-color);
+  box-shadow: black;
   float: left;
   position: fixed;
   z-index: 1;
@@ -91,7 +96,7 @@ export default {
   top: -2vh;
   left: 2px;
   text-align: right;
-  background-color: #E07B39;
+  background-color: var(--sidebar-bg-color);
   border-bottom-right-radius: 15px;
   padding-right: 2.5rem;
   padding-left: 5rem;

@@ -12,24 +12,30 @@ import { faHouse, faHandPointLeft } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Noisebg from "~/components/Backgrounds/noisebg.vue";
 import NasaBG from "~/components/Backgrounds/NasaBG.vue";
+import RandomBG from "~/components/Backgrounds/RandomBG.vue";
+
+import NavBar from '~/components/Sidebar/RocketNav.vue'
+
+
 
 library.add(faUser, faHouse, faHandPointLeft)
 </script>
 
 <template>
 
-  <router-view />
 
-  <div class="main-content">
-    <span v-if="route.path !== '/'">
-      <Sidebar />
-      <Noisebg />
-
+    <span v-if="['/'].includes(route.path)">
+      <RandomBG/>
+      <router-view />
     </span>
     <span v-else>
-      <NasaBG />
+      <NavBar/>
+      <RandomBG />
+      <div class="main-content">
+        <router-view />
+
+      </div>
     </span>
-  </div>
 </template>
 
 <style scoped>
@@ -45,14 +51,14 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   background-color: var(--color-white);
   color: #333;
 }
 
 .main-content {
-  margin-left: 200px; /* Platz für Sidebar */
-  padding: 2rem;
+ /* margin-left: calc(10px + 1rem);*/ /* Platz für Sidebar */
+  margin-top: 4rem;
 }
 
 .icon-demo {

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>🟡 Du gegen die Banane</h1>
+    <h1>🫵 vs. 🍌  Du gegen die Banane</h1>
 
     <input v-model="inputText" @keyup.enter="handleInput" placeholder="    Sag etwas zur Banane..." />
     <button @click="handleInput">Senden</button>
@@ -96,9 +96,8 @@ export default {
 .wrapper {
   max-width: 1000px;
   margin: 40px auto;
-  background: #fffbe7;
+  background: var(--color-accent-light);
   padding: 20px;
-  font-family: sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -107,7 +106,7 @@ export default {
 
 .chat {
   border: 1px solid #ccc;
-  background: #ffffe0;
+  background: white;
   min-height: 100px;
   max-width: 1000px;
   overflow-y: auto;
@@ -117,11 +116,11 @@ export default {
 }
 
 .banana {
-  color: goldenrod;
+  color: gold;
   font-weight: bold;
 }
 .user {
-  color: #444;
+  color: var(--color-active);
   font-weight: bold;
 }
 input {

@@ -15,6 +15,23 @@
   --color-white-transparent: rgba(255, 255, 255, 0.9);
 }
 
+--color-active: #5C374C
+--color-background: #985277
+--color-hover: #CE6A85
+--color-accent: #FF8C61
+--color-accent-light: #FAA275
+
+--color-primary: #5C374C' /*Hauptsfarbe - Buttons, icons, aktive Elemente*/
+--color-secondary:     /* Alternative Farbe - Hover, sekundär*/
+--color-accent:    /*auffällige Akzentfarbe - z.b. hinweise oder besondere inhalte*/
+--color-muted: /*gedämpfte Farbe - für weniger wichtige UI Elemente*/
+--color-border: /* trennlinien etc*/
+
+bg
+hover
+accent
+
+
 
 bzw
 
