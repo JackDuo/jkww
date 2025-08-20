@@ -1,0 +1,1 @@
+import{_ as r,c as o,a,o as t}from"./B11kk1Z9.js";const n={};function l(s,e){return t(),o("div",null,e[0]||(e[0]=[a("iframe",{src:"/SozAGame2/index.html",width:"800",height:"600",frameborder:"0",allowfullscreen:""},null,-1)]))}const f=r(n,[["render",l]]);export{f as default};
