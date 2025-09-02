@@ -15,7 +15,7 @@ gdjs.evtsExt__PixelPerfectMovement__BrakingDistance.eventsList0 = function(runti
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getArgument("Speed") * eventsFunctionContext.getArgument("Speed") / (2 * eventsFunctionContext.getArgument("Deceleration")); }}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.getArgument("Speed") * eventsFunctionContext.getArgument("Speed") / (2 * eventsFunctionContext.getArgument("Deceleration"));}}
 
 }
 

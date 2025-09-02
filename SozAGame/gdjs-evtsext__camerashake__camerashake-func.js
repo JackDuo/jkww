@@ -46,7 +46,7 @@ if (isConditionTrue_0) {
 let isConditionTrue_0 = false;
 {
 {gdjs.evtTools.variable.variableClearChildren(eventsFunctionContext.sceneVariablesForExtension.getFromIndex(6));
-}{gdjs.evtsExt__CameraShake__SetLayerShakable.func(runtimeScene, true, eventsFunctionContext.getArgument("NewLayer"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{gdjs.evtsExt__CameraShake__SetLayerShakable.func(runtimeScene, true, eventsFunctionContext.getArgument("NewLayer"), eventsFunctionContext);
 }}
 
 }
