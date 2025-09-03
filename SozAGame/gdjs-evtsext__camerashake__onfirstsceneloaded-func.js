@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CameraShake__onFirstSceneLoaded !== "undefined") {
 gdjs.evtsExt__CameraShake__onFirstSceneLoaded = {};
 
 
-gdjs.evtsExt__CameraShake__onFirstSceneLoaded.userFunc0xa671f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CameraShake__onFirstSceneLoaded.userFunc0xa7f140 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (gdjs._cameraShakeExtension) {
     return;
@@ -649,7 +649,7 @@ gdjs.evtsExt__CameraShake__onFirstSceneLoaded.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__CameraShake__onFirstSceneLoaded.userFunc0xa671f0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CameraShake__onFirstSceneLoaded.userFunc0xa7f140(runtimeScene, eventsFunctionContext);
 
 }
 

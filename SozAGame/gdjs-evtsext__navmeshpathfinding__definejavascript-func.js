@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript !== "undefined") {
 gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript = {};
 
 
-gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript.userFunc0xbf8388 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript.userFunc0x12ccef0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // This code has been built from https://github.com/D8H/NavMesh-GDevelop-Extension
 // If you need to make any modification, please open a PR on github.
@@ -4431,7 +4431,7 @@ gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript.userFunc0xbf8388(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__NavMeshPathfinding__DefineJavaScript.userFunc0x12ccef0(runtimeScene, eventsFunctionContext);
 
 }
 

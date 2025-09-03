@@ -43,7 +43,6 @@ gdjs.copyArray(runtimeScene.getObjects("E"), gdjs.StartMenuCode.GDEObjects1);
 {for(var i = 0, len = gdjs.StartMenuCode.GDEObjects1.length ;i < len;++i) {
     gdjs.StartMenuCode.GDEObjects1[i].getBehavior("ShakeObject_PositionAngle").ShakeObject_PositionAngle(0.5, 0, 1, 10, 1, true, null);
 }
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Overworld");
 }}
 
 }
@@ -65,11 +64,12 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDStartButtonObjects1.length;i<l;+
 gdjs.StartMenuCode.GDStartButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27600172);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27609668);
 }
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.camera.setCameraX(runtimeScene, gdjs.evtTools.camera.getCameraX(runtimeScene, "", 0) - (1280), "", 0);
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Overworld");
 }}
 
 }
@@ -91,7 +91,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterButtonObjects1.length;i<l;
 gdjs.StartMenuCode.GDWeiterButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27595828);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27605108);
 }
 }
 if (isConditionTrue_0) {
