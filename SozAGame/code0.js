@@ -103,7 +103,7 @@ gdjs.copyArray(runtimeScene.getObjects("IntroText"), gdjs.StartMenuCode.GDIntroT
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects3.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDIntroTextObjects3[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.StartMenuCode.GDIntroTextObjects3[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDIntroTextObjects3[k] = gdjs.StartMenuCode.GDIntroTextObjects3[i];
         ++k;
@@ -126,7 +126,7 @@ gdjs.copyArray(runtimeScene.getObjects("IntroText"), gdjs.StartMenuCode.GDIntroT
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects2.length;i<l;++i) {
-    if ( !(gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").IsFinished(null)) ) {
+    if ( !(gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDIntroTextObjects2[k] = gdjs.StartMenuCode.GDIntroTextObjects2[i];
         ++k;
@@ -136,7 +136,7 @@ gdjs.StartMenuCode.GDIntroTextObjects2.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.StartMenuCode.GDIntroTextObjects2 */
 {for(var i = 0, len = gdjs.StartMenuCode.GDIntroTextObjects2.length ;i < len;++i) {
-    gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").ShowFullText(null);
+    gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").ShowFullText((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -179,7 +179,7 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWei
     gdjs.StartMenuCode.GDWeiterButtonObjects2[i].hide(false);
 }
 }{for(var i = 0, len = gdjs.StartMenuCode.GDWeiterButtonObjects2.length ;i < len;++i) {
-    gdjs.StartMenuCode.GDWeiterButtonObjects2[i].Activate(true, null);
+    gdjs.StartMenuCode.GDWeiterButtonObjects2[i].Activate(true, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -193,10 +193,26 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWei
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
+{let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
+{
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+isConditionTrue_1 = gdjs.evtTools.input.hasAnyTouchOrMouseStarted(runtimeScene);
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+}
+}
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27817004);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(28556468);
 }
 }
 if (isConditionTrue_0) {
@@ -215,7 +231,7 @@ gdjs.copyArray(runtimeScene.getObjects("IntroText"), gdjs.StartMenuCode.GDIntroT
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects2.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.StartMenuCode.GDIntroTextObjects2[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDIntroTextObjects2[k] = gdjs.StartMenuCode.GDIntroTextObjects2[i];
         ++k;
@@ -224,7 +240,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects2.length;i<l;++i
 gdjs.StartMenuCode.GDIntroTextObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27807172);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29119340);
 }
 }
 if (isConditionTrue_0) {
@@ -243,7 +259,7 @@ gdjs.copyArray(runtimeScene.getObjects("IntroText"), gdjs.StartMenuCode.GDIntroT
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects1.length;i<l;++i) {
-    if ( !(gdjs.StartMenuCode.GDIntroTextObjects1[i].getBehavior("AutoTyping").IsFinished(null)) ) {
+    if ( !(gdjs.StartMenuCode.GDIntroTextObjects1[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDIntroTextObjects1[k] = gdjs.StartMenuCode.GDIntroTextObjects1[i];
         ++k;
@@ -274,7 +290,7 @@ gdjs.copyArray(runtimeScene.getObjects("SpaceKey"), gdjs.StartMenuCode.GDSpaceKe
 gdjs.copyArray(runtimeScene.getObjects("Titel2"), gdjs.StartMenuCode.GDTitel2Objects1);
 gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWeiterButtonObjects1);
 {for(var i = 0, len = gdjs.StartMenuCode.GDEObjects1.length ;i < len;++i) {
-    gdjs.StartMenuCode.GDEObjects1[i].getBehavior("ShakeObject_PositionAngle").ShakeObject_PositionAngle(0.5, 0, 1, 10, 1, true, null);
+    gdjs.StartMenuCode.GDEObjects1[i].getBehavior("ShakeObject_PositionAngle").ShakeObject_PositionAngle(0.5, 0, 1, 10, 1, true, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Overworld");
 }{for(var i = 0, len = gdjs.StartMenuCode.GDWeiterButtonObjects1.length ;i < len;++i) {
@@ -290,7 +306,7 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWei
     gdjs.StartMenuCode.GDSpaceKeyObjects1[i].hide();
 }
 }{for(var i = 0, len = gdjs.StartMenuCode.GDWeiterButtonObjects1.length ;i < len;++i) {
-    gdjs.StartMenuCode.GDWeiterButtonObjects1[i].Activate(false, null);
+    gdjs.StartMenuCode.GDWeiterButtonObjects1[i].Activate(false, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -304,7 +320,7 @@ gdjs.copyArray(runtimeScene.getObjects("Titel"), gdjs.StartMenuCode.GDTitelObjec
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDTitelObjects1.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDTitelObjects1[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.StartMenuCode.GDTitelObjects1[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDTitelObjects1[k] = gdjs.StartMenuCode.GDTitelObjects1[i];
         ++k;
@@ -331,7 +347,7 @@ gdjs.copyArray(runtimeScene.getObjects("StartButton"), gdjs.StartMenuCode.GDStar
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDStartButtonObjects1.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDStartButtonObjects1[i].IsClicked(null) ) {
+    if ( gdjs.StartMenuCode.GDStartButtonObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDStartButtonObjects1[k] = gdjs.StartMenuCode.GDStartButtonObjects1[i];
         ++k;
@@ -340,7 +356,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDStartButtonObjects1.length;i<l;+
 gdjs.StartMenuCode.GDStartButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27813740);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(28559916);
 }
 }
 if (isConditionTrue_0) {
@@ -358,7 +374,7 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterIntroButton"), gdjs.StartMenuCode.
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterIntroButtonObjects1.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDWeiterIntroButtonObjects1[i].IsClicked(null) ) {
+    if ( gdjs.StartMenuCode.GDWeiterIntroButtonObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDWeiterIntroButtonObjects1[k] = gdjs.StartMenuCode.GDWeiterIntroButtonObjects1[i];
         ++k;
@@ -367,7 +383,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterIntroButtonObjects1.length
 gdjs.StartMenuCode.GDWeiterIntroButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(27815076);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(28557260);
 }
 }
 if (isConditionTrue_0) {
@@ -405,7 +421,7 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWei
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterButtonObjects1.length;i<l;++i) {
-    if ( gdjs.StartMenuCode.GDWeiterButtonObjects1[i].IsClicked(null) ) {
+    if ( gdjs.StartMenuCode.GDWeiterButtonObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.StartMenuCode.GDWeiterButtonObjects1[k] = gdjs.StartMenuCode.GDWeiterButtonObjects1[i];
         ++k;
@@ -414,7 +430,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterButtonObjects1.length;i<l;
 gdjs.StartMenuCode.GDWeiterButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(28375284);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29122140);
 }
 }
 if (isConditionTrue_0) {

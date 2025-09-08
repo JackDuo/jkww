@@ -18,7 +18,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")).getChild(eventsFunctionContext.getArgument("ItemName")).getChild("IsCapacityLimited").getAsBoolean();
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 

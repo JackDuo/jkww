@@ -54,7 +54,7 @@ gdjs.InterviewCode.GDTransitionObjects3= [];
 gdjs.InterviewCode.GDTransitionObjects4= [];
 
 
-gdjs.InterviewCode.asyncCallback29564204 = function (runtimeScene, asyncObjectsList) {
+gdjs.InterviewCode.asyncCallback30337284 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.InterviewCode.localVariables);
 gdjs.copyArray(runtimeScene.getObjects("Grass"), gdjs.InterviewCode.GDGrassObjects2);
 {gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.InterviewCode.GDGrassObjects2.length !== 0 ? gdjs.InterviewCode.GDGrassObjects2[0] : null), true, "Background", 0);
@@ -69,7 +69,7 @@ gdjs.InterviewCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.InterviewCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.InterviewCode.asyncCallback29564204(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.InterviewCode.asyncCallback30337284(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -87,7 +87,7 @@ gdjs.copyArray(runtimeScene.getObjects("Dialogue"), gdjs.InterviewCode.GDDialogu
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects3.length;i<l;++i) {
-    if ( gdjs.InterviewCode.GDDialogueObjects3[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.InterviewCode.GDDialogueObjects3[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.InterviewCode.GDDialogueObjects3[k] = gdjs.InterviewCode.GDDialogueObjects3[i];
         ++k;
@@ -96,7 +96,7 @@ for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects3.length;i<l;++i)
 gdjs.InterviewCode.GDDialogueObjects3.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29572620);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30345580);
 }
 }
 if (isConditionTrue_0) {
@@ -124,7 +124,7 @@ isConditionTrue_0 = isConditionTrue_1;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29569788);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30352092);
 }
 }
 if (isConditionTrue_0) {
@@ -153,7 +153,7 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects2.length;i<l;++i) {
-    if ( gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").HasJustTyped(null) ) {
+    if ( gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").HasJustTyped((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.InterviewCode.GDDialogueObjects2[k] = gdjs.InterviewCode.GDDialogueObjects2[i];
         ++k;
@@ -162,14 +162,14 @@ for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects2.length;i<l;++i)
 gdjs.InterviewCode.GDDialogueObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29559260);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30355788);
 }
 }
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.InterviewCode.GDDialogueObjects2 */
 {for(var i = 0, len = gdjs.InterviewCode.GDDialogueObjects2.length ;i < len;++i) {
-    gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").ShowFullText(null);
+    gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").ShowFullText((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }{gdjs.evtTools.debuggerTools.log("2", "info", "1");
 }{runtimeScene.getScene().getVariables().getFromIndex(1).setBoolean(true);
@@ -178,7 +178,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.InterviewCode.asyncCallback29588548 = function (runtimeScene, asyncObjectsList) {
+};gdjs.InterviewCode.asyncCallback30346420 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.InterviewCode.localVariables);
 {gdjs.evtTools.runtimeScene.popScene(runtimeScene);
 }gdjs.InterviewCode.localVariables.length = 0;
@@ -192,7 +192,7 @@ gdjs.InterviewCode.eventsList3 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.InterviewCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1.25), (runtimeScene) => (gdjs.InterviewCode.asyncCallback29588548(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1.25), (runtimeScene) => (gdjs.InterviewCode.asyncCallback30346420(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -240,7 +240,7 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29574284);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30358380);
 }
 }
 if (isConditionTrue_0) {
@@ -270,7 +270,7 @@ isConditionTrue_1 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Dialogue"), gdjs.InterviewCode.GDDialogueObjects2);
 for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects2.length;i<l;++i) {
-    if ( gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.InterviewCode.GDDialogueObjects2[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_2 = true;
         gdjs.InterviewCode.GDDialogueObjects2[k] = gdjs.InterviewCode.GDDialogueObjects2[i];
         ++k;
@@ -304,7 +304,7 @@ isConditionTrue_1 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Run"), gdjs.InterviewCode.GDRunObjects2);
 for (var i = 0, k = 0, l = gdjs.InterviewCode.GDRunObjects2.length;i<l;++i) {
-    if ( gdjs.InterviewCode.GDRunObjects2[i].IsClicked(null) ) {
+    if ( gdjs.InterviewCode.GDRunObjects2[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_2 = true;
         gdjs.InterviewCode.GDRunObjects2[k] = gdjs.InterviewCode.GDRunObjects2[i];
         ++k;
@@ -338,7 +338,7 @@ gdjs.copyArray(runtimeScene.getObjects("Transition"), gdjs.InterviewCode.GDTrans
     gdjs.InterviewCode.GDTransitionObjects1[i].hide(false);
 }
 }{for(var i = 0, len = gdjs.InterviewCode.GDTransitionObjects1.length ;i < len;++i) {
-    gdjs.InterviewCode.GDTransitionObjects1[i].getBehavior("FlashTransitionPainter").PaintEffect("0;0;0", 1, "Circular", "Forward", 255, null);
+    gdjs.InterviewCode.GDTransitionObjects1[i].getBehavior("FlashTransitionPainter").PaintEffect("0;0;0", 1, "Circular", "Forward", 255, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }
 { //Subevents
@@ -359,7 +359,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Transition"), gdjs.InterviewCode.GDTransitionObjects1);
 {for(var i = 0, len = gdjs.InterviewCode.GDTransitionObjects1.length ;i < len;++i) {
-    gdjs.InterviewCode.GDTransitionObjects1[i].getBehavior("FlashTransitionPainter").PaintEffect("0;0;0", 0.5, "Circular", "Backward", 255, null);
+    gdjs.InterviewCode.GDTransitionObjects1[i].getBehavior("FlashTransitionPainter").PaintEffect("0;0;0", 0.5, "Circular", "Backward", 255, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 6.5, "Background", 0);
 }
@@ -446,7 +446,7 @@ gdjs.copyArray(runtimeScene.getObjects("Dialogue"), gdjs.InterviewCode.GDDialogu
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.InterviewCode.GDDialogueObjects1.length;i<l;++i) {
-    if ( gdjs.InterviewCode.GDDialogueObjects1[i].getBehavior("AutoTyping").IsFinished(null) ) {
+    if ( gdjs.InterviewCode.GDDialogueObjects1[i].getBehavior("AutoTyping").IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.InterviewCode.GDDialogueObjects1[k] = gdjs.InterviewCode.GDDialogueObjects1[i];
         ++k;
@@ -459,7 +459,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(29592916);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30255572);
 }
 }
 }

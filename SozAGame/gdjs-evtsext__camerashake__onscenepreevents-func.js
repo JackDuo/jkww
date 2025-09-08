@@ -193,7 +193,7 @@ eventsFunctionContext.localVariables.pop();
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__CameraShake__IsShaking.func(runtimeScene, eventsFunctionContext);
+isConditionTrue_0 = gdjs.evtsExt__CameraShake__IsShaking.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 if (isConditionTrue_0) {
 
 { //Subevents

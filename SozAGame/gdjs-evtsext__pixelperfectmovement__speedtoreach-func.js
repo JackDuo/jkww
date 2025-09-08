@@ -18,7 +18,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("Distance") >= 0);
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = Math.sqrt(2 * eventsFunctionContext.getArgument("Distance") * eventsFunctionContext.getArgument("Deceleration"));}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = Math.sqrt(2 * eventsFunctionContext.getArgument("Distance") * eventsFunctionContext.getArgument("Deceleration")); }}}
 
 }
 
@@ -31,7 +31,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("Distance") < 0);
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = -(Math.sqrt(-(2) * eventsFunctionContext.getArgument("Distance") * eventsFunctionContext.getArgument("Deceleration")));}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = -(Math.sqrt(-(2) * eventsFunctionContext.getArgument("Distance") * eventsFunctionContext.getArgument("Deceleration"))); }}}
 
 }
 

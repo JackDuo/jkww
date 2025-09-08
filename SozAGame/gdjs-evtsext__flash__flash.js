@@ -132,7 +132,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreE
 gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects2.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects2 */
-{gdjs.evtsExt__Flash__ToggleVisibility.func(runtimeScene, gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595Flash_9546Flash_9546prototype_9546doStepPreEventsContext_9546GDObjectObjects2Objects, eventsFunctionContext);
+{gdjs.evtsExt__Flash__ToggleVisibility.func(runtimeScene, gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595Flash_9546Flash_9546prototype_9546doStepPreEventsContext_9546GDObjectObjects2Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }{for(var i = 0, len = gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects2.length ;i < len;++i) {
     gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects2[i].resetTimer("Flash_Visibility_Timer");
 }
@@ -165,7 +165,7 @@ gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObject
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects1 */
 {for(var i = 0, len = gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).Stop(eventsFunctionContext);
+    gdjs.evtsExt__Flash__Flash.Flash.prototype.doStepPreEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).Stop((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -297,7 +297,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1.length;i<l;++i) {
-    if ( !(gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsFlashing(eventsFunctionContext)) ) {
+    if ( !(gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsFlashing((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
         isConditionTrue_0 = true;
         gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1[k] = gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1[i];
         ++k;
@@ -306,7 +306,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashConte
 gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1 */
-{gdjs.evtsExt__Flash__ToggleVisibility.func(runtimeScene, gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595Flash_9546Flash_9546prototype_9546FlashContext_9546GDObjectObjects1Objects, eventsFunctionContext);
+{gdjs.evtsExt__Flash__ToggleVisibility.func(runtimeScene, gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595Flash_9546Flash_9546prototype_9546FlashContext_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }{eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setIsFlashing(true)
 }{for(var i = 0, len = gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__Flash__Flash.Flash.prototype.FlashContext.GDObjectObjects1[i].resetTimer("Flash_Visibility_Timer");
@@ -418,7 +418,7 @@ gdjs.evtsExt__Flash__Flash.Flash.prototype.IsFlashingContext.eventsList0 = funct
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = false;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
 
 }
 
@@ -431,7 +431,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getIsFlashing();
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -524,7 +524,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__Flash.Flash.prototype.onDeActivateContext.GDObjectObjects1);
 {for(var i = 0, len = gdjs.evtsExt__Flash__Flash.Flash.prototype.onDeActivateContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__Flash__Flash.Flash.prototype.onDeActivateContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).Stop(eventsFunctionContext);
+    gdjs.evtsExt__Flash__Flash.Flash.prototype.onDeActivateContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).Stop((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -722,7 +722,7 @@ gdjs.evtsExt__Flash__Flash.Flash.prototype.HalfPeriodTimeContext.eventsList0 = f
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getHalfPeriodTime();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getHalfPeriodTime(); }}}
 
 }
 

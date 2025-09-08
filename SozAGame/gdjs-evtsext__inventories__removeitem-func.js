@@ -15,7 +15,7 @@ gdjs.evtsExt__Inventories__RemoveItem.eventsList0 = function(runtimeScene, event
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__Inventories__SetItemCount.func(runtimeScene, gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext) - (1), eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext);
+{gdjs.evtsExt__Inventories__SetItemCount.func(runtimeScene, gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) - (1), eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }

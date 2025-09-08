@@ -147,7 +147,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.doStep
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.doStepPostEventsContext.GDObjectObjects1 */
 {for(var i = 0, len = gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).UpdatePreviousHighValue(eventsFunctionContext);
+    gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).UpdatePreviousHighValue((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -240,7 +240,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.ValueC
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCurrentValue();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCurrentValue(); }}}
 
 }
 
@@ -332,7 +332,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetVal
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1);
-{eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setCurrentValue(gdjs.evtTools.common.clamp(eventsFunctionContext.getArgument("Value"), 0, (( gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).MaxValue(eventsFunctionContext))))
+{eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setCurrentValue(gdjs.evtTools.common.clamp(eventsFunctionContext.getArgument("Value"), 0, (( gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).MaxValue((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))))
 }}
 
 }
@@ -344,7 +344,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__PanelSp
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (eventsFunctionContext.getArgument("Value") < (( gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).PreviousHighValue(eventsFunctionContext)));
+{isConditionTrue_0 = (eventsFunctionContext.getArgument("Value") < (( gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).PreviousHighValue((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1 */
@@ -366,7 +366,7 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1);
 {for(var i = 0, len = gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).UpdatePreviousHighValue(eventsFunctionContext);
+    gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.SetValueContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).UpdatePreviousHighValue((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -460,7 +460,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.MaxVal
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getMaxValue();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getMaxValue(); }}}
 
 }
 
@@ -647,7 +647,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCurrentValue() == 0);
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -741,7 +741,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCurrentValue() == eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getMaxValue());
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -832,7 +832,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.Previo
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getPreviousHighValue();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getPreviousHighValue(); }}}
 
 }
 
@@ -1015,7 +1015,7 @@ gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.Previo
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getPreviousHighValueDuration();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getPreviousHighValueDuration(); }}}
 
 }
 
@@ -1214,7 +1214,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.R
 gdjs.evtsExt__PanelSpriteContinuousBar__ResourceBar.ResourceBar.prototype.IsChangingContext.GDObjectObjects1.length = k;
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 

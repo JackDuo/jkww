@@ -15,7 +15,9 @@ gdjs.evtsExt__Inventories__CopyToVariableToInventory.eventsList0 = function(runt
 
 let isConditionTrue_0 = false;
 {
-{gdjs.Variable.copy(eventsFunctionContext.getArgument("SceneVariable"), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")), false);
+{if (typeof eventsFunctionContext !== 'undefined') {
+gdjs.Variable.copy(eventsFunctionContext.getArgument("SceneVariable"), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")), false);
+}
 }}
 
 }

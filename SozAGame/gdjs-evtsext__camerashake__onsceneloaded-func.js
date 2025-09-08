@@ -15,7 +15,7 @@ gdjs.evtsExt__CameraShake__onSceneLoaded.eventsList0 = function(runtimeScene, ev
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__CameraShake__SetLayerShakable.func(runtimeScene, true, "", eventsFunctionContext);
+{gdjs.evtsExt__CameraShake__SetLayerShakable.func(runtimeScene, true, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }

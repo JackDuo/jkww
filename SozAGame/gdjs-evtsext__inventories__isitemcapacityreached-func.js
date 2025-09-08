@@ -15,13 +15,13 @@ gdjs.evtsExt__Inventories__IsItemCapacityReached.eventsList0 = function(runtimeS
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext);
+isConditionTrue_0 = gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext) >= gdjs.evtsExt__Inventories__ItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext);
+isConditionTrue_0 = gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) >= gdjs.evtsExt__Inventories__ItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext.getArgument("InventoryName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 

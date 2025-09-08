@@ -15,7 +15,7 @@ gdjs.evtsExt__Inventories__SetItemCount.eventsList0 = function(runtimeScene, eve
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext));
+isConditionTrue_0 = !(gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")).getChild(eventsFunctionContext.getArgument("ItemName")).getChild("Count").setNumber(Math.max(0, eventsFunctionContext.getArgument("Value")));
 }}
@@ -28,9 +28,9 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext);
+isConditionTrue_0 = gdjs.evtsExt__Inventories__IsLimitedItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 if (isConditionTrue_0) {
-{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")).getChild(eventsFunctionContext.getArgument("ItemName")).getChild("Count").setNumber(gdjs.evtTools.common.clamp(0, gdjs.evtsExt__Inventories__ItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext), eventsFunctionContext.getArgument("Value")));
+{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("InventoryName")).getChild(eventsFunctionContext.getArgument("ItemName")).getChild("Count").setNumber(gdjs.evtTools.common.clamp(0, gdjs.evtsExt__Inventories__ItemCapacity.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), eventsFunctionContext.getArgument("Value")));
 }}
 
 }

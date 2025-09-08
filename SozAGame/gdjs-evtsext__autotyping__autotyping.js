@@ -146,7 +146,7 @@ let isConditionTrue_0 = false;
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1);
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setFullText((( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1.length === 0 ) ? "" :gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Text")).getText()))
 }{for(var i = 0, len = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).RestartFromBeginning(eventsFunctionContext);
+    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.onCreatedContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).RestartFromBeginning((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -244,7 +244,7 @@ gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContex
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3.length;i<l;++i) {
-    if ( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsNextWordWrapped(eventsFunctionContext) ) {
+    if ( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsNextWordWrapped((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[k] = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[i];
         ++k;
@@ -271,7 +271,7 @@ if (isConditionTrue_0) {
 gdjs.copyArray(gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1, gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3);
 
 {for(var i = 0, len = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3.length ;i < len;++i) {
-    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).ClearForcedLineBreak(eventsFunctionContext);
+    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects3[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).ClearForcedLineBreak((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }
 { //Subevents
@@ -330,7 +330,7 @@ eventsFunctionContext.localVariables.pop();
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1.length;i<l;++i) {
-    if ( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsFinished(eventsFunctionContext) ) {
+    if ( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).IsFinished((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
         gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[k] = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[i];
         ++k;
@@ -369,7 +369,7 @@ if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1 */
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setFullText((( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1.length === 0 ) ? "" :gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[0].getBehavior(eventsFunctionContext.getBehaviorName("Text")).getText()))
 }{for(var i = 0, len = gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).RestartFromBeginning(eventsFunctionContext);
+    gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).RestartFromBeginning((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -512,7 +512,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.localVariables[0].getFromIndex(0).getAsNumber() < (( gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.IsNextWordWrappedContext.GDObjectObjects2.length === 0 ) ? 0 :gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.IsNextWordWrappedContext.GDObjectObjects2[0].getHeight()));
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -945,7 +945,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (gdjs.evtTools.string.strLen(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getTypedText()) == gdjs.evtTools.string.strLen(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getFullText()));
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -1040,7 +1040,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCharacterJustAdded();
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
@@ -1452,7 +1452,7 @@ gdjs.evtsExt__AutoTyping__AutoTyping.AutoTyping.prototype.IntervalContext.events
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getInterval();}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getInterval(); }}}
 
 }
 

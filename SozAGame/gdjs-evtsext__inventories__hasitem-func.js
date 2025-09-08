@@ -15,9 +15,9 @@ gdjs.evtsExt__Inventories__HasItem.eventsList0 = function(runtimeScene, eventsFu
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), eventsFunctionContext) > 0;
+isConditionTrue_0 = gdjs.evtsExt__Inventories__ItemCount.func(runtimeScene, eventsFunctionContext.getArgument("InventoryName"), eventsFunctionContext.getArgument("ItemName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) > 0;
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
 
