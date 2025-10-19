@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money doesn't grow on trees! | Serious Game über Wohnungslosigkeit | Bachelorarbeit Soziale Arbeit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #363636;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjIZ0WxO5QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADJElEQVRo3u2av0sbURTHP29XRYuFQnFwq1Zxcejs4tq1i0uH/gcO/gEdnFwKOrl0cBFcCg6FQqHg4FBwcCg4OBQcHAoODgUH15dLuITLJcm9JO+9JN/wgST3knvP93vPPe+8u0AikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJDJw1gqFQhY4BD4Bz4ET4D3wBjgGdoFtYAEYAQ6AJeAV8BJYBz4AB8AOsAG8BkaBHWAZWATGgXVgDdgFNoFlYBq4AJaAOWAWWAJWgF1gG1gCZoBzYBGYB6aBRWAF2AO2gEVgGjgHFoB5YAJYAFaBfWALWACmgAvCwDwwDkwCK8A+sAksAFPABWFgDpgAxoFlYB/YAOaBSaBEGJgFxoAJYBl4C2wAs8AEUCYMzADjwCiwBLwD1oEZYBwoEwamgTFgBFgE3gNrwDQwBpQJA5PAGDAMLAAlYBWYAkaBMmFgAhgFhoAFoAysABPAEFAmDIwDI8AgsACUgGVgHBgEyoSBUWAE6AcWgBKwBIwB/UCZMDAKDAP9wDxQBBaBUaAPKBMGRoBhoA+YB4rAAjAC9AFlwsAwMAT0AXNAAZgHhoFeoEwYGAYGgV5gDigAc8AQ0AOUCQNDwCDQA8wCeWAGGAJ6gDJhYAgYBLqBGSAPTAODQDdQJgwMAgNANzAN5IEpYADoAsqEgQGgH+gCpoA8MAX0A11AmTAwAPQBncAkkAcmgX6gEygTBvqBPqATmADywATQB3QAZcJAP9ALdADjQB4YB/qADqBMGOgDeoF2YAzIA2NAL9AOlAkDvUAP0AaMAXlgFOgB2oAyYaAX6AHagFEgD4wA3UAbUCYM9ALdQBswAuSBYaAbaAXKhIEeoBtoBYaBPDAMdAOtQJkw0AN0Ay3AEJAHhoAuoAUoEwa6gS6gGRgE8sAg0AU0A2XCQBfQBTQBA0AeGAA6gSagTBjoBDqBRqAfyAP9QAfQCJQJAx1AB9AA9AF5oA/oAOqBMmGgHWgH6oE+IA/0Au1APVAmDLQBbUA90APkgR6gDagDyoSBNqAVqAN6gDzQDbQCtUCZMNAKtAB1QDeQB7qAFqAWKBMGWoBmoBboBPJAJ9AM1ABlwkAz0ATUAB1AHmgHmoBqoEwYaAKagGqgHcgDbUATUAWUCQONQCNQBbQBeaAVaASqgDJhoBFoBCqBViAPtAINQCVQJgw0AA1AJdAC5IFmoB6oAMqEgXqgHqgAmoE80ATUAxVAmTBQD9QDFUAjkAcagTqgHCgTBuqAOqAcqAfyQB1QC5QDZcJALVALlAG1QB6oBWqAMqBMGKgBaoAyoAbIA9VANVAGlAkD1UA1UAZUA3mgCqgCyoAyYaAKqAL+B9H3C5hqK1QGAAAAAElFTkSuQmCC');
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .newspaper {
+            background-color: #f5f5dc;
+            border: 8px double #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: visible;
+        }
+
+        .newspaper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+            pointer-events: none;
+        }
+
+        .pixel-border {
+            border: 4px solid black;
+            position: relative;
+        }
+
+        .pixel-border::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid black;
+            pointer-events: none;
+        }
+
+        .scrollable-text {
+            height: 300px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+
+        .scrollable-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        .links a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .links a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s ease;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+        /* Definiert das 16:9-Verhältnis */
+        .aspect-ratio-16x9 {
+            position: relative;
+            padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+            height: 0; /* Wichtig, um die Höhe ausschließlich über Padding zu steuern */
+        }
+
+        /* Passt den Inhalt (den iFrame) in das definierte Verhältnis ein */
+        .aspect-ratio-16x9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .scroll-lock {
+            overflow: hidden !important; /* Verhindert das Scrollen des Body-Inhalts */
+            height: 100vh !important;    /* Fixiert die Höhe des Viewports */
+        }
+
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+<div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
+<div class="newspaper pixel-border p-8 max-w-7xl mx-auto w-full">
+    <header class="mb-8 text-center">
+        <h1 class="text-4xl mb-6 mt-2">ABSCHLUSSARBEIT SOZIALE ARBEIT</h1>
+        <div class="flex justify-between items-center text-sm mb-2">
+            <span>VOL. 1, NO. 1</span>
+            <span>SEIT 2025</span>
+            <span>PREIS: 0¢</span>
+        </div>
+        <hr class="border-t-2 border-black my-2">
+        <h2 class="text-2xl mb-3 mt-3">Konzeptarbeit</h2>
+        <hr class="border-t-2 border-black my-2">
+        <div class="flex justify-between text-xs mt-4">
+            <span>THEMA: Serious Game über Wohnungslosigkeit </span>
+            <span>MONTAG, JANUAR 5, 2025</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Main picture iframe section -->
+        <div class="pixel-border p-1 col-span-3 relative left-1/2 transform -translate-x-1/2 overflow-visible"
+             style="width: 125%; background-color: #f5f5dc;">
+
+            <div class="bg-black p-1 z-50">
+                <div class="aspect-ratio-16x9">
+                    <iframe
+                            id="gameFrame"
+                            src="/SGWohnungslosigkeit/index.html"
+                            frameborder="0"
+                            scrolling="no"
+                            style="border:none; overflow:hidden;"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+            <div class="text-center text-sm mt-1">Spiel: Money doesn't grow on trees!</div>
+        </div>
+
+        <!-- Plain text section -->
+        <div class="pixel-border p-4 md:col-span-2">
+            <h3 class="text-xl mb-4 underline">Über das Spiel</h3>
+            <div class="text-sm">
+                <p class="mb-4">
+                    Dieses Projekt ist die konzeptionelle Ausarbeitung eines digitalen Serious Games im Rahmen einer Bachelorarbeit. Ziel ist es, die Lebensrealität wohnungsloser Menschen für eine breite Öffentlichkeit erfahrbar zu machen, zu Sensibilisieren und Empathie zu fördern.
+                </p>
+                <p class="mb-4">
+                    Die gesamte Konzeption folgt sozialarbeiterischen Methodiken (Koproduktion, Beteiligung, Advocacy, Menschenrechtsbildung, etc.) und anerkannten Game-Design-Prinzipien, um eine tiefgreifende Perspektive und Immersion zu ermöglichen. Die wissenschaftliche Leistung liegt in der systematischen Übersetzung von sozialer Ungleichheit in spielbare Systeme.
+                </p>
+                <p>
+                    Die Einblicke in die Wohnungs- bzw. Obdachlosigkeit wurde durch einige Mitwirkende ermöglicht, die ihre eigene Geschichte als Betroffene und ehemals Betroffene geteilt haben. Ich danke den Mitwirkenden für ihr Vertrauen und die Möglichmachung des Projektes!
+                </p>
+            </div>
+        </div>
+
+        <!-- Links section -->
+        <div class="pixel-border p-4 md:col-span-1">
+            <h3 class="text-xl mb-4 underline">Wichtige Links</h3>
+            <div class="links space-y-4 text-sm">
+                <a href="https://jackduo.de/SGWohnungslosigkeit/" class="block hover:text-red-600">• Spiel auf Vollbild (vorher speichern)</a>
+                <a href="#" class="block hover:text-red-600">• Wird noch eingefügt</a>
+            </div>
+        </div>
+
+
+        <!-- Scrollable text section -->
+        <div class="pixel-border p-4 col-span-3">
+            <h3 class="text-xl mb-4 underline">Quellen</h3>
+            <div class="scrollable-text text-sm">
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+                <p class="mb-4">Hier wird noch eine Quelle eingefügt</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-center text-xs">
+        <hr class="border-t-2 border-black my-2">
+        <p> © 2025 Jason Braun. </p>
+        <p> Lizensiert unter der Creative Commons Lizenz (CC BY-NC-SA 4.0 International). </p>
+    </footer>
+</div>
+
+<script>
+    feather.replace();
+
+    // Add some pixelated noise effect
+    document.addEventListener('DOMContentLoaded', () => {
+        const newspaper = document.querySelector('.newspaper');
+        const noise = document.createElement('div');
+        noise.style.position = 'absolute';
+        noise.style.top = '0';
+        noise.style.left = '0';
+        noise.style.width = '100%';
+        noise.style.height = '100%';
+        noise.style.backgroundImage = 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjIZ0WxO5QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADJElEQVRo3u2av0sbURTHP29XRYuFQnFwq1Zxcejs4tq1i0uH/gcO/gEdnFwKOrl0cBFcCg6FQqHg4FBwcCg4OBQcHAoODgUH15dLuITLJcm9JO+9JN/wgST3knvP93vPPe+8u0AikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJDJw1gqFQhY4BD4Bz4ET4D3wBjgGdoFtYAEYAQ6AJeAV8BJYBz4AB8AOsAG8BkaBHWAZWARGgXVgDdgFNoFlYBq4AJaAOWAWWAJWgF1gG1gCZoBzYBGYB6aBRWAF2AO2gEVgGjgHFoB5YAJYAFaBfWALWACmgAvCwDwwDkwCK8A+sAksAFPABWFgDpgAxoFlYB/YAOaBSaBEGJgFxoAJYBl4C2wAs8AEUCYMzADjwCiwBLwD1oEZYBwoEwamgTFgBFgE3gNrwDQwBpQJA5PAGDAMLAAlYBWYAkaBMmFgAhgFhoAFoAysABPAEFAmDIwDI8AgsACUgGVgHBgEyoSBUWAE6AcWgBKwBIwB/UCZMDAKDAP9wDxQBBaBUaAPKBMGRoBhoA+YB4rAAjAC9AFlwsAwMAT0AXNAAZgHhoFeoEwYGAYGgV5gDigAc8AQ0AOUCQNDwCDQA8wCeWAGGAJ6gDJhYAgYBLqBGSAPTAODQDdQJgwMAgNANzAN5IEpYADoAsqEgQGgH+gCpoA8MAX0A11AmTAwAPQBncAkkAcmgX6gEygTBvqBPqATmADywATQB3QAZcJAP9ALdADjQB4YB/qADqBMGOgDeoF2YAzIA2NAL9AOlAkDvUAP0AaMAXlgFOgB2oAyYaAX6AHagFEgD4wA3UAbUCYM9ALdQBswAuSBYaAbaAXKhIEeoBtoBYaBPDAMdAOtQJkw0AN0Ay3AEJAHhoAuoAUoEwa6gS6gGRgE8sAg0AU0A2XCQBfQBTQBA0AeGAA6gSagTBjoBDqBRqAfyAP9QAfQCJQJAx1AB9AA9AF5oA/oADqAeqBMGGgH2oF6oA/IA71AO1APlAkDbUAbUAf0AHmgB2gDaoEyYaANaAXqgB4gD3QDrUAtUCYMtAItQB3QDeSBbqAFqAXKhIEGoAGoBrqAPNAFNAHVQJkw0AA0ANVAF5AHOoFmoAYoEwaagCagCqgF8kAr0AhUAWXCQCPQCFQBbUAeaAUagUqgTBhoBBqBSqAVyAOtQANQCZQJA41AI1AFtAF5oBVoACqBMmGgHqgHKoBmIA80AfVABVAmDNQD9UAF0AzkgaZfE1UY/dxYDskAAAAASUVORK5CYII=")';
+        noise.style.opacity = '0.03';
+        noise.style.pointerEvents = 'none';
+        newspaper.appendChild(noise);
+
+        // Add some animation to the iframe border
+        const iframeBorder = document.querySelector('.pixel-border');
+        setInterval(() => {
+            iframeBorder.style.borderColor = ['#333', '#666', '#999', '#666'][Math.floor(Math.random() * 4)];
+        }, 1000);
+    });
+    const gameFrame = document.getElementById("gameFrame");
+
+    // Scroll deaktivieren
+    function disableScroll() {
+        document.body.style.overflow = "hidden";
+    }
+
+    // Scroll wieder aktivieren
+    function enableScroll() {
+        document.body.style.overflow = "auto";
+    }
+
+    const overlay = document.getElementById("overlay");
+
+    // Overlay einblenden
+    function showOverlay() {
+        overlay.classList.remove("hidden");
+    }
+
+    // Overlay ausblenden
+    function hideOverlay() {
+        overlay.classList.add("hidden");
+    }
+    // Wenn iframe angeklickt / Fokus bekommt
+    gameFrame.addEventListener("mouseenter", () => {
+    disableScroll();
+    });
+    gameFrame.addEventListener("click", () => {
+        disableScroll();
+    });
+
+    // Wenn Maus den iframe verlässt → Scroll wieder aktivieren
+    gameFrame.addEventListener("mouseleave", () => {
+        enableScroll();
+    });
+
+    // Falls außerhalb irgendwo geklickt wird → Scroll wieder aktivieren
+    document.addEventListener("click", (e) => {
+        if (!gameFrame.contains(e.target)) {
+            enableScroll();
+        }
+    });
+
+
+
+</script>
+</body>
+</html>

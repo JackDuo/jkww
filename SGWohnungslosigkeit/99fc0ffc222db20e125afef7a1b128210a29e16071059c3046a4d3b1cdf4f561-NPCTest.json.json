@@ -1,0 +1,912 @@
+[
+	{
+		"title": "Test",
+		"tags": "",
+		"body": "Oh Hi!\n[[Hast du ein bisschen Kleingeld?! |DialogueYes]] \n[[Tschüss. |DialogueNo]]",
+		"position": {
+			"x": 272,
+			"y": 267
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DialogueYes",
+		"tags": "",
+		"body": "Klar. <<money give 1.25>> Ich hab noch ein paar Münzen. \n<<pfand give 5>> Und noch ein Paar Flaschen, die ich eben abgeben wollte. \nDu siehst auch etwas hungrig aus. Ich hab auch noch was zu Essen! Nimm es gerne!\n<<give Sandwitch 5 DeleteNo>> *dir wurde gesundes Essen gegeben*\nIch hoffe, ich konnte dir damit etwas helfen! \n[[Answer:CloseTest|CloseTest]]",
+		"position": {
+			"x": 22,
+			"y": 97
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DialogueNo",
+		"tags": "",
+		"body": "Tschüss.\n[[Answer:CloseTest|CloseTest]]",
+		"position": {
+			"x": -12,
+			"y": 397
+		},
+		"colorID": 0
+	},
+	{
+		"title": "CloseTest",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": -265,
+			"y": 244
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission2StartDialogInv",
+		"tags": "",
+		"body": "...: \"Ist alles okay? Du bist gerade umgekippt!\"\n[[ich weiß nicht...|Mission2DontKnow]]\n[[Alles okay!|Mission2ImFine]]",
+		"position": {
+			"x": 780,
+			"y": 162
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission2DontKnow",
+		"tags": "",
+		"body": "...: \"Du siehst ganz schön blass aus!\"\n...: \"Ich denke mal, du solltest was essen und trinken.\"\n[[Answer:Mission2s2|Mission2s2]]",
+		"position": {
+			"x": 618,
+			"y": 434
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission2ImFine",
+		"tags": "",
+		"body": "...: \"Das fällt mir schwer zu glauben.\"\n...: \"Du bist ziemlich blass!\"\n[[Answer:Mission2s2|Mission2s2]]",
+		"position": {
+			"x": 877,
+			"y": 426
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission2s2",
+		"tags": "",
+		"body": "...: \"Schau mal, ich hab zum Glück was dabei.\"\n<<give Sandwitch 1 DeleteNo>> *dir wurde gesundes Essen gegeben*\n<<give Flasche 2 DeleteNo>> *dir wurde 2x Wasser gegeben*\n...: \"Ich muss jetzt nur leider weiter. Pass bitte auf dich auf!\"\n...: \"Vielleicht sieht man sich ja nochmal!\" \n...: <<Mission2NPCGo>> \"Ciao!\"\n[[Answer:Mission2s3|Mission2s3]]",
+		"position": {
+			"x": 775,
+			"y": 669
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission2s3",
+		"tags": "",
+		"body": "Du: \"Das ist wirklich komisch. Ich weiß gar nicht was passiert ist.\"\nDu: \"Aber ich sollte vermutlich auf sie hören und was essen.\"\n[[Answer:Mission2Close|Mission2Close]]",
+		"position": {
+			"x": 507,
+			"y": 743
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission2Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 509,
+			"y": 985
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v1Stefan",
+		"tags": "",
+		"body": "???: \"Hey, du siehst aus als würdest du gerade eine schwere Zeit durchmachen!\"\n???: \"Die Situation kenne ich nur zu gut!\"\n???: \"Mir ist eben ein blödes Missgeschick passiert.\"\n???: \"Mein Rucksack ist mir eben kaputtgegangen, den muss ich jetzt reparieren.\"\n???: \"Nur komme ich hier grade nicht weg und Nähzeug hab ich auch keines einstecken.\"\n???: \"Kannst du mir vielleicht helfen? Weil ich hier schon so lange sitze, hab ich vergessen zu trinken...\"\n???: \"Ich hab extrem Durst. Kannst du mir vielleicht eine Flasche Wasser besorgen?\"\n[[ Ja, klar! |Mission5v1Yes]] \n[[ Nein. |Mission5v1No]]",
+		"position": {
+			"x": 1443,
+			"y": 94
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v1Yes",
+		"tags": "",
+		"body": "???: \"Hier, Ich zahle das natürlich auch.\"\n<< money give 5>> *Stefan hat dir Geld gegeben*\n???: \"Danke schon mal! Bis später!\"\n[[Answer:Mission5v1Close|Mission5v1Close]]",
+		"position": {
+			"x": 1307,
+			"y": 376
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v1No",
+		"tags": "",
+		"body": "???: \"Okay schade. Verstehe ich aber.\"\n???: \"Schönen Tag dir trotzdem noch!\"\n[[Answer:Mission5v1Close|Mission5v1Close]]",
+		"position": {
+			"x": 1569,
+			"y": 383
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v1Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1438,
+			"y": 629
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v2Stefan",
+		"tags": "",
+		"body": "???: \"Vielen Dank für das Wasser, du rettest mich gerade!\"\n<< give Flasche 1 DeleteYes >> \n???: \"Ich war kurz vom Verdursten.\"\n???: \"Den Rest des Geldes kannst du selbstverständlich als Laufgeld behalten!\"\n*??? trinkt*\n???: \"...\"\n???: \"Sehe ich richtig, dass du auch grade keine Unterkunft hast?\"\n[[ Ja... |Mission5v2Yes]] \n[[ Doch, hab ich! |Mission5v2No]]",
+		"position": {
+			"x": 1717,
+			"y": 791
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v2Yes",
+		"tags": "",
+		"body": "???: \"Dachte ich mir! ...Aber nicht im negativen...!\"\n???: \"Also, sorry! Ähm...\"\nStefan: \"Okay, kurz von neu! Ich bin Stefan.\"\nStefan: \"Die Frage war eigentlich mit guter Absicht.\"\nStefan: \"Ich wollte dir einen kurzen Rat geben, was ich auf die harte Tour lernen musste.\"\nStefan: \"Vielleicht kennst du ja diese Notunterkünfte hier in der Stadt.\"\nStefan: \"Ich muss dich nämlich warnen.\"\nStefan: \"Ich war auch mal häufiger in so einer. Das war damals noch in meiner Heimatstadt.\"\nStefan: \"Da gab es auch Spinde, in denen ich meine Sachen einschließen konnte.\"\nStefan: \"Es kam jedoch leider mehrmals dazu, dass mir beim Schlafen der Schlüssel geklaut wurde.\"\nStefan: \"Das war wirklich beschissen. All mein Zeug war weg.\"\nStefan: \"Seitdem sehe ich's nicht ein und penne nur auf der Straße.\"\nStefan: \"Mal abgesehen davon, dass in den Unterkünften ständig jemand verprügelt wurde... Ohne wirklichen Grund.\"\nStefan: \"Ich muss dir wirklich davon abraten, dich da einzurichten!\"\nStefan: \"Das war wirklich unangenehm damals...\"\nStefan: \"...\"\nStefan: \"Ich merke gerade, dass ich wieder in einen Monolog gefallen bin.\"\nStefan: \"Ich danke dir wirklich fürs Zuhören! Deine Anwesenheit gibt mir grade wirklich viel.\"\nStefan: \"Ich kann den meisten nicht so wirklich trauen... Viele Leute hab ich nicht.\"\nStefan: \"Aber du hörst im Gegensatz zu den meisten einfach kurz zu. Das ist wirklich schön!\"  [[Answer:Mission5v3Stefan|Mission5v3Stefan]]",
+		"position": {
+			"x": 1515,
+			"y": 1031
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v2No",
+		"tags": "",
+		"body": "???: \"Oh, ich wollte dir wirklich nicht zu Nahe treten.\"\n???: \"Ich dachte nur… Ist auch egal.\"\n???: \"Ich hoffe, ich hab nicht zu viel deiner Zeit gestohlen.\"\nStefan: \"Falls wir uns wieder sehen: Ich bin Stefan.\"\nStefan: \"Alles gute, ciao!\" \n[[Answer:Mission5v2Close|Mission5v2Close]]",
+		"position": {
+			"x": 1769,
+			"y": 1037
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v3Stefan",
+		"tags": "",
+		"body": "Stefan: \"...\"\nStefan: \"Ähm... Ich hab noch eine kleine Bitte. Du wirkst generell super nett.\"\nStefan: \"Leider hab ich bisher meinen Rucksack nicht geflickt bekommen.\"\nStefan: \"Mir fehlt Nähzeug, um die aufgerissenen Nähte zu reparieren.\"\nStefan: \"Könntest du so nett sein – ich komme hier leider nicht weg – von einem meiner Bekannten Nähzeug zu besorgen?\"\nStefan: \"Der ist manchmal etwas komisch – sag ihm einfach, Stefan hat dich geschickt.\"\nStefan: \"Das wäre super lieb, danke schon mal!\"\nStefan: \"Bis Später!\" \n[[Answer:Mission5v2Close|Mission5v2Close]]",
+		"position": {
+			"x": 1514,
+			"y": 1282
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v2Close",
+		"tags": "Close",
+		"body": "Empty Text.",
+		"position": {
+			"x": 1765,
+			"y": 1519
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v4komTyp",
+		"tags": "",
+		"body": "Komischer Typ: \"Was willst du, ich bin beschäftigt.\"\n[[ Steven schickt mich |Mission5v4falseSteven]] \n[[ Stefanie schickt mich |Mission5v4falseStefanie]]\n[[ Stefan schickt mich |Mission5v4trueStefan]] \n[[ Jürgen schickt mich |Mission5v4falseJurgen]]",
+		"position": {
+			"x": 1400,
+			"y": 1740
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v4falseSteven",
+		"tags": "",
+		"body": "Kom. Typ: \"Ich kenne keinen Steven. Verschwende nicht meine Zeit und verzieh dich.\"\n[[Answer:Mission5v4Close|Mission5v4Close]]",
+		"position": {
+			"x": 1072,
+			"y": 1705
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v4falseStefanie",
+		"tags": "",
+		"body": "Kom. Typ: \"Mit so einer hatte ich noch nichts. Haha.\"\n[[Answer:Mission5v4Close|Mission5v4Close]]",
+		"position": {
+			"x": 1122,
+			"y": 1921
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v4falseJurgen",
+		"tags": "",
+		"body": "Kom. Typ: \"Verzieh dich! Für Jürgen hab ich nichts übrig.\"\nKom. Typ: \"Richte ihm das von mir aus << schlag >> *Backpfeife* , wenn du ihn siehst.\" \n[[Answer:Mission5v4Close|Mission5v4Close]]",
+		"position": {
+			"x": 964,
+			"y": 1500
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v4Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 847,
+			"y": 2044
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v5Stefan",
+		"tags": "",
+		"body": "Stefan: \"Schön dich zu sehen, ich habe schon fast gedacht, du würdest mich hier stehen lassen.\"\nStefan: \"Hast du das Nähzeug auftreiben können?\"\nDu: \"Leider nicht. Er hat mir nicht geglaubt, dass du mich geschickt hast.\"\nDu: \"Er meinte nur, ich soll ihm einen Gegenstand von dir zeigen. Sonst redet er nicht mit mir.\"\nDu: \"Diese Lauferei, ich sag’s dir…\"\nStefan: \"Tut mir sehr leid! Das hätte ich mir eigentlich denken müssen.\"\nStefan: \"Er hat eine wirklich schwere Zeit hinter sich, weißt du?\"\nStefan: \"Er ist im Gegensatz zu mir kaum etwas anderes als die Straße gewöhnt.\"\nStefan: \"Wie du vielleicht an seinen Narben gesehen hast, hat er definitiv eine Geschichte zu erzählen.\"\nStefan: \"Das hinterlässt einfach alles seine Spuren. Wenn man niemandem trauen kann, ist man einfach extrem vorsichtig.\"\nStefan: \"Es fällt ihm einfach schwer Leuten zu vertrauen.\"\nStefan: \"Manchmal kann er einem mit der Art auch wirklich Angst einjagen,...\"\nStefan: \"...aber wenn man ihn einmal richtig kennengelernt hat, ist er ein wirklich guter Kerl.\"\nStefan: \"Er hat mir auch schon oft aus brenzligen Lagen heraus geholfen. Da kann man echt auf ihn bauen.\"\nStefan: \"Im Gegensatz zu den meisten anderen...\"\nStefan: \"Aber genug der Miesepetrigkeit! Es tut mir wirklich leid, dass das für dich jetzt so umständlich geworden ist.\"\nDu: \"Danke für die Erklärung. Irgendwie macht das schon Sinn, jetzt wo du’s sagst.\"\nDu: \"Er kam mir zu Beginn nur recht impulsiv vor.\"\nDu: \"Aber klar. Wenn jeder mit einem Messer hinter dir steht...\"\nDu: \"...hilft's die Leute abzuschrecken.\"\nDu: \"Gibt es denn einen Gegenstand, den du mir mitgeben könntest, damit ich ihn überzeugen kann?\"\nStefan: \"Hmm gute Frage, die meisten Sachen wurden mir geklaut oder ich hatte nicht den Platz dafür...\"\nStefan: \"Dadurch wird es etwas schwierig...\"\nStefan: \"Mir fällt nur mein Diabolo ein. Aber damit versuche ich mir meistens ein paar Münzen zu verdienen.\"\nStefan: \"Das ist mir leider zu heilig um wegzugeben...\"\n*Stefan kramt in seinem kaputten Rucksack*\nStefan: \"...\"\nStefan: \"Aha!\"\nStefan: \"Hier. Ich hab meine Sonnenbrille dabei.\"\nStefan: \"Nimm die. Er sollte sie wieder erkennen. Aber bitte versprich sie mir wieder zu bringen, ich habe nur die eine!\"\n<< give Sonnenbrille 1 >> *Sonnenbrille erhalten*\nStefan: \"Ich warte hier so lange.\"\nStefan: \"Danke dir nochmal und bis später!\" \n[[Answer:Mission5v5Close|Mission5v5Close]]",
+		"position": {
+			"x": 1429,
+			"y": 2348
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v4trueStefan",
+		"tags": "",
+		"body": "Kom. Typ: \"Hm, aber warum schickt der faule Hund dann jemanden zu mir, den ich nicht kenne,...\"\nKom. Typ: \"...anstatt selbst zu kommen, wenn er was möchte?\"\nDu: \"Er sitzt ein paar Kreuzungen weiter fest und braucht dein Nähzeug.\"\nDu: \"Er meinte, ich wirke ganz nett und hat mich um Hilfe wegen seinem Ruck...\"\nKom. Typ: \"Ist mir egal was er angeblich von dir hält.\"\nKom. Typ: \"Was mich eher interessiert, ist:\"\nKom. Typ: \"Wie du auf die dumme Idee kommst, dass ich dir abkaufe,...\"\nKom. Typ: \"...dass du mir mein Nähzeug nicht einfach abziehen willst.\"\nDu: \"...\"\nKom. Typ: \"Wenn du mir beweisen willst, dass er dir wirklich so gut vertraut,...\"\nKom. Typ: \"...dann bring mir eine seiner Sachen, die er nicht jedem anvertrauen würde.\"\nKom. Typ: \"Wenn du mir so nen' Gegenstand zeigen kannst, dann können wir weiterreden.\"\nKom. Typ: \"Vorher Vertraue ich dir kein Stück. Da kann ja jeder ankommen.\"\nKom. Typ: \"Jetzt mach dich.\" \n[[Answer:Mission5v4Close|Mission5v4Close]]",
+		"position": {
+			"x": 1415,
+			"y": 2110
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v5Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1678,
+			"y": 2433
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v6KomischerTyp",
+		"tags": "",
+		"body": "Du: \"Hier, er hat mir seine Sonnenbrille mitgegeben.\"\nKom. Typ: \"Ja gut, dann glaube ich dir mal das er dich geschickt hat.\"\nKom. Typ: \"Welches Problem hatte der faule Hund den noch gleich?\"\nDu: \"Sein Rucksack ist gerissen und er brauch ein Nähset um ihn zu reparieren.\"\nKom. Typ: \"Ach ja der Rucksack wieder! Das Teil macht ständig Faxen!\"\nKom. Typ: \"Warum sagst du das den nicht gleich? Mit dem hat er immer wieder Probleme.\"\nKom. Typ: \"Hättest du mir das gleich gesagt hätte ich dir direkt geglaubt und du dir die Lauferei sparen können! Haha!\"\nDu: \"...\"\nKom. Typ: \"Der Rucksack macht ihm schon lange zu schaffen.\"\nKom. Typ: \"Können uns halt nicht so einfach nen neuen leisten, nich? Beschissene Situation...\"\nKom. Typ: \"Naja. Dann will ich dir mal das Nähset mitgeben.\"\nKom. Typ: \"Bring es mir aber bloß wieder, sonst bekommen wir n’ Problem miteinander!\"\n<< give Naehset 1 >> *Nähset erhalten*\nDu: \"Klar, du kriegst es wieder!\"\nKom. Typ: \"Lass mich aber nicht zu lange warten. Ich merke schon, dass mir die Nähte meiner Jacke bald aufgehen.\" [[Answer:Mission5v6Close|Mission5v6Close]]",
+		"position": {
+			"x": 1599,
+			"y": 2668
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v6Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1348,
+			"y": 2769
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v7Stefan",
+		"tags": "",
+		"body": "Stefan: \"Hey! Hat die Sonnenbrille ausgereicht als Beweis?\"\nDu: \"Ja, zum Glück. Irgendwie stresst mich seine Art sehr.\"\nStefan: \"Das kann ich mir vorstellen, am Anfang war es für mich genauso.\"\nStefan: \"Mit der Zeit gewöhnt man sich an seine Eigenarten.\"\nStefan: \"Ich kann dir sagen, wenn er jemanden mal in sein Herz geschlossen hat,...\"\nStefan: \"…kann dir egal wer blöd kommen. Er steht hinter dir!\"\n<< give Sonnenbrille 1 DeleteYes>> *Sonnenbrille und Nähzeug übergeben*\nStefan: \"Dann fange ich mal an den Rucksack zu flicken. Das wird nicht lange dauern.\"\n[[ Etwas fragen |Mission5v7Question]] \n[[ Warten |Mission5v7wait]]",
+		"position": {
+			"x": 1584,
+			"y": 3009
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v7Question",
+		"tags": "",
+		"body": "Du: \"Darf ich dich eine Kleinigkeit fragen?\"\nStefan: \"Klar!\"\nDu: \"Mir ist aufgefallen das du dich sehr gewählt ausdrückst. Warum achtest du so sehr darauf, was du sagst?\"\nStefan: \"Hm. Da hab ich noch nie so wirklich drüber nachgedacht.\"\nStefan: \"Aber jetzt wo du’s sagst...\"\nStefan: \"Du kennst das ja bestimmt.\"\nStefan: \"Die meisten Leute sind schnell ziemlich komisch, wenn sie mitbekommen, dass du wohnungslos bist.\"\nStefan: \"Mir ist irgendwie wichtig, dass ich das verstecke. Das beschämt mich sehr, wenn das durchkommt...\"\nDu: \"Oh ja, das verstehe ich!\"\nStefan: \"Ja. Ich glaube, das ist meine Strategie, damit umzugehen.\"\nStefan: \"Wenn alle einen ungebildeten Alkoholiker erwarten, erwartet das bei mir keiner.\"\nStefan: \"Die Leute sind meistens einfach viel offener, wenn sie es nicht wissen.\"\n[[ answer: |Mission5v7afterwait]]",
+		"position": {
+			"x": 1448,
+			"y": 3260
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v7afterwait",
+		"tags": "zuMission5v8weiter",
+		"body": "...\nStefan: \"So mein Rucksack sollte fürs Erste wieder halten.\"\nStefan: \"Danke dir das du den Weg auf dich genommen hast um, mir zu helfen!\"\n*Nähzeug erhalten*\nStefan: \"Vermutlich solltest du ihm sein Nähzeug wieder zurückbringen.\"\nStefan: \"Ich glaube, dadurch kannst du einen guten Eindruck bei ihm hinterlassen\"\nStefan: \"Auch wenn er manchmal komisch ist, kann man sich doch immer auf seine Unterstützung verlassen.\"\nStefan: \"Das ist eine wichtige Ressource, das kann ich dir sagen!\"\nStefan: \"Vielen Dank nochmal!\" \nStefan: \"Lass ihn aber lieber nicht zu lange warten, das kann er nicht sonderlich leiden.\"\nStefan: \"Ich würde mich freuen, wenn wir uns mal wieder sehen. Du findest mich eigentlich immer hier.\"\nStefan: \"Hier ist immer ein guter Platz zum Jonglieren um sich ein paar münzen zu verdienen.\"\nStefan: \"Bis bald!\"\n [[Answer:Mission5v7Close|Mission5v7Close]]",
+		"position": {
+			"x": 1585,
+			"y": 3518
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v7wait",
+		"tags": "",
+		"body": "...\n...\n[[ Warten |Mission5v7afterwait]]",
+		"position": {
+			"x": 1716,
+			"y": 3261
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v8Stefan",
+		"tags": "",
+		"body": "Stefan: \"Schön dich wiederzusehen!\"\nDu: \"Hey. Du hast das letzte Mal von deiner Jonglage erzählt. Was genau jonglierst du?\"\nStefan: \"Freut mich das du fragst. Ich spiele seit langem Diabolo.\"\nDu: \"Was genau ist das?\"\nStefan: \"Ganz einfach. Du hast Stäbe in der Hand, die mit einer Schnur verbunden sind.\"\nStefan: \"Darauf versuchst du einen JoJo-förmigen Zylinder zu Jonglieren.\"\nStefan: \"Ich kann dir gerne einen Trick zeigen.\"\n*Stefan schleudert Diabolo in die Luft und fängt es mit Leichtigkeit*\nStefan: \"Wenn du magst, kannst du auch mal gerne damit spielen!\"\n<< Minigame Diabolo >> \n...\nStefan: \"Wenn du willst kannst du gerne jederzeit wiederkommen und nochmal spielen!\" \n[[Answer:Mission5v8Close|Mission5v8Close]]",
+		"position": {
+			"x": 1330,
+			"y": 3835
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v7Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1591,
+			"y": 3740
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v8Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1313,
+			"y": 4056
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission5v9Minigame",
+		"tags": "",
+		"body": "Du: \"Darf ich nochmal mit den Diabolo jonglieren?\"\nStefan: \"Klar!\"\n<< Minigame Diabolo >> \n...\nStefan: \"Ich hoffe du hattest Spaß! Bis bald!\" \n[[Answer:Mission5v9StefanClose|Mission5v9StefanClose]]",
+		"position": {
+			"x": 1601,
+			"y": 4125
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Mission5v9StefanClose",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1600,
+			"y": 4353
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v1late",
+		"tags": "",
+		"body": "Kom. Typ: \"Wo warst du?\"\nKom. Typ: \"Ich hab gedacht du hast dich verzogen.\"\nKom. Typ: \"Hast du wenigstens das Nähzeug dabei?\"\nKom. Typ: \"Schau mal. Meine Jacke ist schon gerissen...\"\nKom. Typ: \"Jetzt geb mir doch endlich das Nähzeug!\"\n<< give Naehset 1 DeleteYes>>\n*Nähzeug gegeben*\nKom. Typ: \"Ich weiß nicht ob ich dir nochmal helfen sollte...\"\nKom. Typ: \"Naja. Scheiß drauf. Ich hoffe Stefan konnte seinen Rucksack flicken.\"\nMario: \"Übrigens, ich bin Mario.\"\nMario: \"Fürs nächste mal wenn wir uns sehen.\"\nMario: \"Ciao.\"\n[[Answer:Mission6v1Close|Mission6v1Close]]",
+		"position": {
+			"x": 1993,
+			"y": 159
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v1Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2141,
+			"y": 395
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v1ontime",
+		"tags": "",
+		"body": "Kom. Typ: \"Ah da bist du ja!\"\nKom. Typ: \"Schon wieder da? So schnell?\"\nKom. Typ: \"Musst dich richtig beeilt haben!\"\nKom. Typ: \"Hast du das Nähzeug?\"\n<< give Naehset 1 DeleteYes>> *Nähzeug gegeben*\nKom. Typ: \"Danke, ich hoffe Stefan konnte seinen Rucksack reparieren.\"\nMario: \"Übrigens fürs nächste Mal. Ich bin Mario.\"\nMario: \"Wir sehen uns!\"\n[[Answer:Mission6v1Close|Mission6v1Close]]",
+		"position": {
+			"x": 2271,
+			"y": 160
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v3",
+		"tags": "",
+		"body": "Du: \"Hey! Alles in Ordnung?\"\n*Mario hustet, ringt nach Luft* \nMario: \"...bin schon okay...\"\nDu: \"Soll ich Hilfe holen? Ein Krankenwagen oder so?\"\nMario: \"Nein, nein... echt nicht. Mehr Schreck als Schaden... glaub ich.\"\n*Mario setzt sich langsam auf*\nMario: \"Uff...\"\nMario: \"Geht schon wieder...\"\n...\nMario: \"Mach dir keine Sorgen, Kleiner. Ich bin zäh. Hab schon Schlimmeres überlebt.\" \nMario: \"Solche halbstarken Spinner treten hier alle paar Wochen auf. Gehört fast schon zum Programm.\"\nDu: \"Aber warum ausgerechnet du? Was ist passiert?\"\nMario: \"Tja… wenn du versuchst, das zu verstehen, drehst du irgendwann durch.\"\nMario: \"Die machen das, weil sie können. Weil's ihnen Spaß macht.\"\nMario: \"Ich saß nur da, hab gelesen, dann stehen sie plötzlich über mir und fangen an.\"\nMario: \"Einfach so.\"\nDu: \"Und... wie bist du da rausgekommen?\"\nMario: \"Alte Tricks. Organe schützen, warten bis der Schock nachlässt. Dann kommt das Adrenalin.\"\nMario: \"Hab einen von denen am Kragen gepackt und weggeschleudert.\" \nMario: \"Hätte böse enden können für ihn, wenn da 'ne Mauer gewesen wär...\"\nDu: \"Ganz ehrlich? Der hätte's verdient.\"\nMario: \"Mag sein. Aber so bin ich nicht. Hab Jahre Kampfsport gemacht.\"\nMario \"Am Anfang war ich selbst zu aggressiv... musste dann 'n Anti-Aggressionskurs machen.\"\nMario: \"Ironie des Lebens: später hab ich die Dinger selbst geleitet. \nMario: \"Jugendlichen beigebracht, mit ihrer Wut klarzukommen. Stell dir das mal vor.\" \n*Mario lacht leise. hustet*\nDu: \"Uff. Man merkt, wie die Gesellschaft gerade nach rechts kippt.\"\nDu: \"Hab's Gefühl, Leute werden egoistischer... härter.\"\nDu: \"Immer diese Abwertung von Menschen, die nicht in ihr Weltbild passen...\"\nMario: \"Voll... Das ist nicht mehr wie früher. Es wird härter auf der Straße,... \nMario: \"Sowas wie gerade eben passiert definitiv viel häufiger.\"\nMario: \"Irgendwas läuft hier richtig schief...\" \n*Mario atmet schwer... winkt ab*\nMario: \"...aber das ist 'ne lange Diskussion. Jetzt brauch ich erstmal Ruhe.\"\nMario: \"Wärst du so nett und bringst mir 'ne kalte Flasche Wasser? Das wär Gold wert.\"\nDu: \"Klar, Mach ich! Bin gleich wieder da!\"\n[[Answer:Mission6v3Close|Mission6v3Close]]",
+		"position": {
+			"x": 2156,
+			"y": 659
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v3Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2153,
+			"y": 904
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v4",
+		"tags": "",
+		"body": "Du: \"Hier, eiskalt. Hab ich so schnell wie möglich geholt.\"\n<< give Flasche 1 DeleteYes >>\n*Mario nimmt die Flasche, presst sie an die Stirn*\nMario: \"Ahhh... das tut gut. Danke dir... ehrlich.\"\n*Mario atmet schwer*\nMario: \"So ganz ohne Folgen war das wohl doch nicht. Mir wird noch schwindlig...\"\nDu: \"Vielleicht solltest du wirklich mal von nem Arzt draufschauen lassen.\"\n*Mario schüttelt den Kopf*\nMario: \"Arzt? Vergiss es. Wenn du so aussiehst wie ich, kriegst du selten echte Hilfe.\"\nMario: \"Meistens nur'n Pflaster und'n Vortrag, dass du dein Leben in den Griff kriegen sollst.\"\n*Mario Zögert*\n...\nMario: \"Aber... es gibt da eine Einrichtung. So 'ne Art Hilfezentrum.\"\nMario: \"Kein Luxus, aber besser als hier auf der Straße rumliegen.\"\nMario: \"Könntest du mich da vielleicht hin begleiten?\"\nDu: \"Klar! Wo ist das?\"\nMario: \"Nicht weit. Aber die haben nur von zwölf bis sechs offen. Wenn wir zu spät kommen... \nMario: \"...dann Pech gehabt.\"\nMario: \"Und allein schaff ich den Weg gerade nur schwer.\" \n[[Answer:Mission6v4Quest|Mission6v4Quest]]",
+		"position": {
+			"x": 2473,
+			"y": 716
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v4Yes",
+		"tags": "",
+		"body": "Du: \"Klar, ich bring dich hin. Keine Frage!\"\nMario: *sichtlich erleichtert*\nMario: \"Danke... mehr hätt’ ich mir nicht wünschen können.\" \n[[Answer:Mission6v4Close|Mission6v4Close]]",
+		"position": {
+			"x": 2331,
+			"y": 1199
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v4No",
+		"tags": "",
+		"body": "Du: \"Geht’s nicht auch ohne mich? Ich hab eigentlich was zu erledigen...\"\nMario: \"Schon klar. Hab nicht erwartet, dass du dich mit meinem Müll rumschlägst...\"\n[[Answer:Mission6v4Close|Mission6v4Close]]",
+		"position": {
+			"x": 2583,
+			"y": 1202
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v4Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2465,
+			"y": 1436
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v4Quest",
+		"tags": "",
+		"body": "Mario: \"Also... was sagst du? Kannst du mich begleiten?\"\n[[ Klar! |Mission6v4Yes]]\n[[ Äh... |Mission6v4No]]",
+		"position": {
+			"x": 2471,
+			"y": 948
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v5",
+		"tags": "",
+		"body": "Mario: \"So, ich geh mal rein. Wird nicht lange dauern.“ \n[[Answer:Mission6v5Close|Mission6v5Close]]",
+		"position": {
+			"x": 2181,
+			"y": 1546
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v5Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2183,
+			"y": 1775
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v6",
+		"tags": "",
+		"body": "*Mario murmelt* \nMario: \"...Gel... Pflaster... als wär’s’n Kinderkratzer...\"\nDu: \"Und? Haben die dir wenigstens richtig geholfen?\"\n*Mario deutet auf den Kopf*\nMario: \"Das da... ist alles. ’Ne glibbrige Salbe und ’n Pflaster. Mehr bin ich denen nicht wert.\"\nMario: \"Mir ist immer noch schwindlig, aber hey – bin ja nur ’n Penner, nicht wahr?\"\nDu: \"Das ist doch nicht normal! Wenn jemand im Anzug so reinkommt, kriegt er direkt einen Krankenwagen,...\" \nMario: \"...eine Woche Klinik, Lohnfortzahlung... und du wirst mit Vaseline abgespeist.\"\nMario: \"Was für ’n krankes Ungleichgewicht.\"\nMario: \"Tja. Willkommen in meiner Welt. Wir Wohnungslose... wir kriegen Versorgung nach Schema F.\"\nMario: \"Gerade genug, dass wir nicht umkippen, aber nie genug, dass wir wirklich auf die Beine kommen.\"\n*Mario setzt sich auf die Stufen, atmet schwer.*\nMario: \"Ich... ich brauch grad Ruhe. Will ein bisschen für mich sein.\"\nDu: \"Soll ich dich heimbringen? Oder irgendwohin begleiten?\"\n*Mario schüttelt langsam den Kopf*\nMario: \"Nein. Ich geh allein. Musst verstehen... wenn du schon fast alles verloren hast,...\"\nMario: \"...dann willst du wenigstens das eine behalten: selber laufen können, auch wenn’s wacklig ist.\"\n*Mario richtet sich mühsam auf, klopft sich Staub von der Jacke, sieht dich kurz an.*\nMario: \"Mach dir keine Sorgen. Ich find meinen Weg. Aber... danke, dass du überhaupt zugehört hast.\"\nMario: \"Das ist mehr, als die meisten tun.\"\n*Mario dreht sich um, geht langsam die Straße hinunter* \n*Sein Gang ist unsicher, aber er zwingt sich dazu, nicht um Hilfe zu bitten.*\n[[ answer: |Mission6v6Close]]",
+		"position": {
+			"x": 2453,
+			"y": 1753
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v6Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2465,
+			"y": 2001
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission6v7",
+		"tags": "",
+		"body": "Du: \"Mario? Alles okay? Wer war das gerade?\"\n*Mario reibt sich die Seite*\nMario: \"Ach, vergiss es. War nur einer von denen, die meinen, man kann bei mir leicht Beute machen.\"\nDu: \"Wie meinst du das?\"\n*Mario seufzt, senkt den Blick*\nMario: \"Der Kerl hat mich überfallen. Nichts Großes... kein Drama. Druck gemacht und mir die Taschen geleert.\"\nDu: \"Shit... und?\"\n*Mario schlägt mit der Faust gegen seine Knie*\nMario: \"Und jetzt hab ich gar nichts mehr. Kein Cent. Nicht mal genug für ’n Brötchen morgen.\"\nDu: \"Hast du dich gewehrt?\"\nMario: \"Und wofür? Ich weiß, wann ich besser die Klappe halte. Hatte früher mal die Kraft...\" \nMario: \"...heute nicht mehr.\"\nMario: \"Heute reicht’s gerade, mich auf den Beinen zu halten. Es wird alles so schwer...\"\n...\nMario: \"Weißt du, wie’s ist, wenn dir das letzte bisschen genommen wird? Nicht nur das Geld...\" \nMario: \"...sondern das Gefühl, irgendwas unter Kontrolle zu haben? Es ist... es ist zum Kotzen.\"\n[[Geld geben|Mission6v7geld]]\n[[Typen verfolgen!|Mission6v7verfolgen]]\n[[Tut mir leid...|Mission6v7sorry]]",
+		"position": {
+			"x": 2256,
+			"y": 2249
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v7geld",
+		"tags": "",
+		"body": "*Mario winkt dankend ab*\nMario: \"Ich will nicht betteln, aber... danke. Wirklich.\" \n[[Answer:Mission6v7Final|Mission6v7Final]]",
+		"position": {
+			"x": 2058,
+			"y": 2517
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v7verfolgen",
+		"tags": "",
+		"body": "*Mario schüttelt entschieden den Kopf*\nMario: \"Lass es. Glaub mir, du willst dich mit solchen Typen nicht anlegen.\"\nMario: \"Ich hab schon genug Ärger, ich will nicht, dass du den auch noch kriegst.\"\n[[Answer:Mission6v7Final|Mission6v7Final]]",
+		"position": {
+			"x": 2267,
+			"y": 2516
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v7sorry",
+		"tags": "",
+		"body": "*Mario bringt das letzte Schmunzeln auf*\nMario: \"Das allein reicht schon. Einer, der’s ernst meint.\"\n[[Answer:Mission6v7Final|Mission6v7Final]]",
+		"position": {
+			"x": 2487,
+			"y": 2528
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v7Final",
+		"tags": "",
+		"body": "*Mario wirkt sichtlich erschöpft*\nMario: \"Manchmal denk ich, die Straße frisst dich Stück für Stück auf. Und heute... hat sie wieder ein Stück genommen.\"\n[[|Mission6v7Close]]",
+		"position": {
+			"x": 2250,
+			"y": 2793
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mission6v7Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2251,
+			"y": 3031
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v1",
+		"tags": "",
+		"body": "Mark: \"Weißt du... manchmal träum, ich würd einfach im Wald leben.\"\nMark: \"Zwischen den Bäumen. Ohne Straßen, ohne Autos, ohne Stress.\"\nMark: \"Nur ein kleines Zelt, vielleicht 'n Feuer. So still, so echt.\"\n*Mark lächelt schwach, die Augen glänzen.*\nMark: \"Da draußen... wär ich vielleicht endlich frei.\"\nMark schweigt, Blick sinkt zu Boden.\nMark: \"Aber naja... so läuft's halt nicht.\"\nDu: \"Das klingt wunderschön. Aber... warum machst du's nicht?\"\nMark: \"Weil Träume nichts bringen, wenn du nicht sicher sein kannst,...\"\nMark: \"...ob du heute genug Essen hast. Du abhängig von den Leuten bist.\"\nMark: \"Ich lebe vom Pfand. Vom Kleingeld, das mir jemand hinschmeißt.\"\nMark: \"Manchmal frag ich mich, ob das überhaupt noch Leben ist.\"\nMark: \"...\"\n*Marks Hände zittern. Seine Stimme bricht leicht.*\nDu: \"Hey... kann ich irgendwas tun? Irgendwas, das dir grade gut tut?\"\nMark: \"Das ist wirklich nett von dir... tatsächlich werde ich einen Gedanken nicht los.\"\nMark: \"Ich hab immer gern gezeichnet. Stundenlang.\"\nMark: \"Hat mir geholfen meine Träume mindestens ein Stück zu erfüllen.\"\nMark: \"Aber mein Skizzenbuch... wurde mir geklaut. Während ich hier vor einigen Tagen eingeschlafen bin.\"\nMark: \"War nur 'n paar Blätter und 'n Stift... aber es war meins.\"\nMark: \"...\"\nMark: \"...weiß nicht mal, warum man sowas überhaupt klaut...\"\nMark: \"...\"\nDu: \"Moment...\"\nDu: \"Ich glaub, ich hab was für dich!\"\n<< give Skizzenbuch 1 DeleteYes>> *Du gibst Mark das gefundene Zeichenbuch*\nDu: \"Hier. Das hab ich gefunden. Vielleicht ist's deines?\"\nDu: \"Das lag da drüben neben 'ner Mülltonne. Sah geklaut aus.\"\n*Mark nimmt es vorsichtig in die Hände*\nMark: \"Das... das meinst du ernst? Ich... weiß gar nicht, was ich sagen soll...\"\nDu: \"Sag einfach danke. Mehr brauch's nicht.\"\nMark: \"Doch... bitte, nimm das hier. Fünfzehn Euro. Ist alles, was ich hab.\"\nMark: \"Das ist das Mindeste!\"\n[[ Geld nehmen |Mission7v1TakeMoney]]\n[[ Dankend ablehnen |Mission7v1DontTakeMoney]]",
+		"position": {
+			"x": 3088,
+			"y": 323
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v1TakeMoney",
+		"tags": "",
+		"body": "Mark: \"Tut gut, dir was zurück geben zu dürfen.\"\n<<money give 15>>\nMark: \"Du kannst dir nicht vorstellen, wie viel mir das bedeutet.\"\nMark: \"Andere hätten sich nicht die Mühe gemacht es mitzunehmen... Danke!\"\n[[answer: |Mission7v1End]]",
+		"position": {
+			"x": 2979,
+			"y": 582
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v1DontTakeMoney",
+		"tags": "",
+		"body": "Mark: \"Dann nimm wenigstens das: 'n alter Beutel. Praktisch zum Sammeln.\"\n<< Pfandbeutelerweiterung >> *Du hast jetzt mehr Platz für Pfand*\nMark: \"Ich weiß, das klingt komisch... aber das bedeutet mir was.\"\n...\nMark: \"Die meisten hätten es einfach liegen lassen oder gar nicht daran gedacht mir zu helfen.\"\nDu: \"Ey, du bist's wert!\"\nMark: \"Danke... echt. Das vergess ich nicht.\" \n[[answer: |Mission7v1End]]",
+		"position": {
+			"x": 3235,
+			"y": 582
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v1End",
+		"tags": "",
+		"body": "Du: \"Ich wünsch dir viel Spaß beim Malen! Bis dann.\"\nMark: \"Danke! Hoffentlich bis bald!\"\n[[ answer: |Mission7v1Close]]",
+		"position": {
+			"x": 3115,
+			"y": 808
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v1Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3116,
+			"y": 1055
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v2",
+		"tags": "",
+		"body": "Du: \"Hey Mark! Ich hoff, du konntest wieder malen.\"\nMark lächelt kurz, dann senkt sich sein Blick.\nMark: \"Ja... danke nochmal. Ohne dich hätt ich das nicht.\"\nMark: \"Aber... mir fehlt das Motiv.\"\nMark: \"Alles hier macht mich traurig.\"\nDu: \"Traurig?\"\nMark: \"Ja...\"\n...\nMark: \"Die Leute, weißt du... die Blicke, dieses Schweigen.\"\nMark: \"Keiner grüßt. Keiner bleibt stehen. Alle tun, als wär ich Luft.\"\nMark: \"Das tut weh. So richtig. Gibt dir das Gefühl,...\nMark: \"Als hätte ich irgendwas verbrochen und muss geächtet werden.\"\n...\nDu: \"Ich kenn das.\"\nDu: \"Selbst, wenn man mal was kriegt,...\"\nDu: \"...wird man vorgeführt. So nett es auch gemeint sein wird...\"\nMark: \"Genau! Die sagen dann so Sachen wie...\"\nMark:\"...‘du hast es nötiger als ich‘.\"\nMark: \"Als ob ich das nicht selbst wüsste.\"\nMark: \"Als ob ich drum gebeten hätte, so zu leben.\"\nMark: \"Und immer dieser Verdacht,...\"\nMark: \"...dass ich davon nur Alkohol oder Drogen kaufen würde.\"\nMark: \"Keiner denkt dran, dass man einfach Pech gehabt haben kann...\nMark: \"...und nur versucht zu überleben.\"\nDu: \"Ja, das ist echt unfair.\" \n[[ answer: |Mission7v2Close]]",
+		"position": {
+			"x": 3547,
+			"y": 1059
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3Go",
+		"tags": "Mission7v3Go",
+		"body": "[[Answer:Mission7v3Close|Mission7v3Close]]",
+		"position": {
+			"x": 3550,
+			"y": 1761
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3",
+		"tags": "",
+		"body": "???: \"Hey! Ihr könnt hier nicht sitzen, verschwindet!\"\n*Der Parkwächter fuchtelt mit seinen Armen*\n*Mark seufzt und steht langsam auf*\nMark: \"Schon gut... Wir gehen ja schon.\"\nDu: \"Moment mal! Der Park gehört doch allen!\"\nWächter: \"Regeln sind Regeln. Bewegung.\"\nDu: \"Das ist unfair! Wir tun doch niemandem was!\"\nMark: \"Lass gut sein... das bringt nichts.\"\nMark: \"So läuft das eben.\"\nMark: \"Haben halt einfach keinen Rückzugsort.\"\nWächter: \"Na los! Sucht euch 'nen anderen Platz!\"\n[[ Komm mal runter! |Mission7v3Calmdown]]\n[[ Wir sind ja gleich weg... |Mission7v3Agree]]\n[[ Diskutieren |Mission7v3Debate]]",
+		"position": {
+			"x": 3547,
+			"y": 1270
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3Calmdown",
+		"tags": "",
+		"body": "Wächter: \"So muss ich nicht mit mir reden lassen!\"\nWächter: \"Ich hol gleich den Wasserschlauch und mach dich mal richtig sauber!\"\nWächter: \"Mach, dass du Land gewinnst!\"\nDu: \"...\"\nMark: \"Komm, lass uns gehen.\"\nDu: \"...\" \n[[Answer:Mission7v3Close|Mission7v3Go]]",
+		"position": {
+			"x": 3337,
+			"y": 1496
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3Agree",
+		"tags": "",
+		"body": "Wächter: \"Das will ich hoffen.\"\n[[Answer:Mission7v3Close|Mission7v3Go]]",
+		"position": {
+			"x": 3547,
+			"y": 1502
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3Debate",
+		"tags": "",
+		"body": "Du: \"Ich lass mich nicht verscheuchen.\"\nDu: \"Wir haben auch ein Recht auf freie Entfaltung!\"\nDu: \"Wir haben auch Grundrechte!\"\nWächter: \"Dann diskutier das gern mit der Polizei.\"\nWächter: \"Einen auf Rechtsanwalt machen...\"\nWächter: \"Wärst du einer, würdest du nicht so aussehen. Haha.\"\nDu: \"...\"\nMark: \"Komm, lass es gut sein.\"\nMark: \"Du weißt ja, dass wir den Polizist*innen egal sind...\"\n[[Answer:Mission7v3Close|Mission7v3Go]]",
+		"position": {
+			"x": 3760,
+			"y": 1489
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v3Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3555,
+			"y": 1981
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v4",
+		"tags": "",
+		"body": "...\nDu: \"Was hatte der denn für ein Problem??\"\nMark: \"Du... Das kann ich dir nicht sagen.\"\nMark: \"Die Leute wollen uns einfach weg haben.\"\nMark: \"Warum, kann ich dir nicht sagen.\"\nMark: \"Sie vergessen nur, dass wir ja einfach gar keinen Ort haben.\"\nDu: \"Ja... Der Typ war einfach wirklich komisch...\"\nMark: \"Definitiv, wobei häufig so aggressiv auf mich reagiert wird.\"\nMark: \"Aber dann muss ich mir jetzt erst mal einen neuen Platz für die Nacht suchen.\"\nDu: \"Wart's ab. Wir sehen uns wieder, ja?\"\nMark: \"Ja... bis dann.\" \n[[Answer:Mission74Close|Mission7v4Close]]",
+		"position": {
+			"x": 3201,
+			"y": 2151
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v4Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3214,
+			"y": 2377
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v0",
+		"tags": "",
+		"body": "Du: \"Hm... Das sieht irgendwie nicht nach Müll aus.\"\nDu: \"Vielleicht sollte ich's mitnehmen. Vielleicht findet sich ja eine Verwendung.\"\n<< give Skizzenbuch 1 >> *Skizzenbuch aufgehoben*\n[[ Mission7v0Close |Mission7v0Close]]",
+		"position": {
+			"x": 3016,
+			"y": -267
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v0Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3018,
+			"y": -57
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v2Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3772,
+			"y": 1068
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v5",
+		"tags": "",
+		"body": "Du: \"Uff. Alles okay bei dir?\"\nMark: \"Geht so. Weißt du... Ich hab einfach keinen Rückzugsort.\"\nMark: \"Egal wo ich bin... überall bist du unerwünscht.\"\nMark: \"Was soll ich anderes tun?\"\nMark: \"Ich würde mich doch gern irgendwohin verziehen, wo keine Menschen sind. Aber wohin?\"\nMark: \"Ich kann doch nirgends anders hin... Ich brauch das Geld, sonst verhunger ich.\"\n*Mark sieht ins Leere*\nMark: \"Nicht mal meine Eltern wollten mich bei sich.\"\nMark: \"Das ist so ein scheiß Gefühl...\"\nMark: \"...\"\nMark: \"Wären die Umstände anders gewesen, hätt ich studiert.\"\nMark: \"Ich war gut in der Schule. Richtig gut. Vielleicht wär ich jetzt Arzt oder so.\"\nDu: \"Wie lief das bei dir? Wie bist du hier eigentlich gelandet?\"\nMark: \"...\"\nMark: \"Mein Vater ist gestorben, als ich sechzehn war.\"\nMark: \"Danach... hat meine Mutter angefangen zu trinken.\"\nMark: \"Es wurde mit der Zeit immer schlimmer. Jeden Tag 'n bisschen mehr.\"\nMark: \"An meinem achtzehnten Geburtstag... gab's dann Streit.\"\nMark: \"Ihr passte was nicht was der Hund angestellt hat und jagte ihm in der Wohnung hinterher.\"\nMark: \"Ich bin dazwischen...\"\nMark: \"Sie hat mich rausgeworfen. Einfach so. In der Nacht.\"\nMark: \"Kein Geld. Kein Plan. Nichts.\"\nMark: \"Und ich lüge nicht. Es war mein achtzehnter Geburtstag...\"\nDu: \"Scheiße... und es war Winter, oder?\"\nMark: \"Ja. Draußen schlafen ging nicht. Ich wär sowas von erfroren.\"\nMark: \"In der Schule mochten die meisten mich nicht. Ich war für die nur der nervige Streber.\"\nMark: \"Zum Glück gab's einen Bekannten. Der ließ mich paar Nächte bei sich schlafen.\"\nMark: \"Ich schwör, ohne das hätt ich's nicht überlebt... Scheiße, wenn ich da wieder dran denke!\"\n*Mark sieht stumm auf seine Hände*\nMark: \"Seitdem... such ich halt jeden Abend 'nen neuen Platz. Aber was sag ich dir, das Problem hab ja nicht nur ich...\"\nMark: \"...\"\nMark: \"Manchmal läuft nachts wer vorbei... betrunken, zugedröhnt. Keine Ahnung was die ballern.\"\nMark: \"...du weißt einfach nie, ob du demnächst aus dem Nichts 'nen Schlag abkriegst.\"\nDu: \"Bisher hatte ich da scheinbar Glück... Das klingt bei dir ja heftig!\"\nMark: \"Freut mich, dass du das so nicht hast. Ehrlich! Die Leute um mich rum haben die Angst alle...\"\nMark: \"Irgendwie... Ach ich weiß nicht...\"\n*Mark zieht den Rucksack enger an sich* \nMark: \"Du, ich bin müde. Muss jetzt 'nen Platz zum Schlafen finden.\"\nDu: \"Klar. Ich drück dir die Daumen. Lass dich nicht zu sehr von solchen Hampelmännern runterkriegen!\"\nMark: \"Danke. Vor allem, dass du zuhörst! Das macht sonst keiner. Sind alle zu sehr bei sich.\"\nDu: \"Klar! Wir reden bald weiter, ja?\"\nMark: \"Ja. Bis bald.\" [[Answer:Mission7v5Close|Mission7v5Close]]",
+		"position": {
+			"x": 3452,
+			"y": 2391
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v5Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3456,
+			"y": 2602
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v6",
+		"tags": "",
+		"body": "Du: \"Mark! Was ist passiert?! Geht's dir gut?!\" \n*Mark hustet und wedelt den Rauch weg*\nMark: \"Ja...\" \nMark: \"...mir geht's gut...\"\nMark: \"...aber... mein Schlafsack...\"\n*Mark starrt auf die verkohlten Reste*\nMark: \"...\"\nMark: \"Jemand hat ihn angezündet... Einfach so...\"\nMark: \"...als ich drin lag und geschlafen hab...\"\nDu: \"Was?! Wer macht denn sowas?!\"\nMark: \"Keine Ahnung...\"\nMark: \"...\"\nMark: \"...hab schon oft davon gehört...\"\nMark: \"Warum hassen die uns so sehr...?\"\nMark: \"...\"\nDu: \"Zum Glück bist du okay... das hätt wirklich schlimm enden können!\"\n*Mark' setzt sich mit leerem Blick hin*\nMark: \"Ein Kumpel von mir...\"\nMark: \"...der hatte nicht so viel Glück.\"\nMark: \"...\"\nMark: \"Sein Schlafsack wurde auch angezündet. Er hat's überlebt... erst mal.\"\nMark: \"Die Wunden haben sich entzündet. Unglaublich schlimm...\"\nMark: \"Krankenhäuser haben ihn immer wieder weggeschickt. Niemand hat geholfen...\"\nMark: \"Er ist später daran gestorben. Einfach so...\"\n*In Mark's leeren Augen sammeln sich Tränen*\nMark: \"...\"\nDu: \"Das ist furchtbar, Mark... ich weiß gar nicht, was ich sagen soll...\"\nMark: \"Sag lieber nichts. Ich muss grad auch erstmal klar kommen...\"\nMark: \"...\"\nMark: \"Ich... Ich brauch kurz Zeit für mich. Komm später wieder, ja?\"\nDu: \"Klar. Ich lass dich erstmal in Ruhe! Wenn du mich brauchst, ich bin für dich da!\"\nMark: \"Danke... wirklich...\"\n*Mark bleibt still stehen und schaut bewegungslos auf die Überreste des Schlafsacks* [[Answer:Mission7v6Close|Mission7v6Close]]",
+		"position": {
+			"x": 3676,
+			"y": 2892
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v6Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3680,
+			"y": 3120
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v7",
+		"tags": "",
+		"body": "Mark: \"Hey... schön, dich wiederzusehen.\"\nDu: \"Wie geht's dir, Mark?\"\n*Mark schweigt kurz und schaut auf den Boden*\nMark: \"Naja... jetzt hab ich halt 'nen Schlafsack mit Loch...\"\nMark: \"Riecht nach verbranntem Plastik. Richtig beschissen.\"\nDu: \"Was machst du jetzt?\"\nMark: \"Ach keine Ahnung. Hab kein Geld für 'nen neuen... \"\nMark: \"Ich muss wohl nochmal versuchen, Sozialleistungen zu beantragen.\"\nDu: \"Nochmal?\"\nMark: \"Jo. War da schon häufig. Das ist auch so eine Sache die mich ankotzt. Ist immer das Gleiche...\"\nMark: \"Ich checke die Formulare einfach nicht.\"\nMark: \"Wenn du nicht irgendwen hast, der sich da auskennt und dir hilft, hast du einfach schon verloren.\"\nMark: \"Antrag stellen, warten, abgelehnt. 'Fehlende Mitwirkung' oder irgend eine andere quatschige Erklärung.\"\nMark: \"Bin nicht dumm. Ich mein, in Deutsch war ich Klassenbester.\"\n*Mark seufzt*\nMark: \"Aber dieses dumme Beamtendeutsch... das ist wie Nebel im Kopf.\"\nMark: \"So als ob diese komischen Begriffe verschwimmen...\"\nMark: \"Begriffe, die du noch nie gehört hast, klingen alle wie ausgedacht.\"\nMark: \"Eine 'Bedarfsgemeinschaft', 'Vermögensnachweis', 'Meldepflicht'... Was auch immer.\"\nMark: \"Und keiner erklärt's.\"\nDu: \"Und Hilfe bekommst du keine?\"\nMark: \"Nein, eben nicht... Wenn du fragst, gucken sie dich an wie ein Auto.\"\nMark: \"Wie soll ich was richtig ausfüllen, wenn ich's nicht versteh?\"\nMark: \"Und googlen kann ich's ja schlecht, hab kein Handy mehr.\"\nMark: \"Ich geb mir wirklich mühe, bin ja auf das Geld angewiesen...\"\nMark: \"...aber es fühlt sich an, als würde ich für einen Test nicht gelernt haben und müsste raten.\"\n*Mark schaut dich müde an*\nMark: \"Vielleicht läuft's ja diesmal anders. Kommst du mit?\"\nDu: \"Klar. Gehen wir!\"\n*Mark lächelt schwach*\nMark: \"Danke. Ich finds leichter, wenn ich nicht allein da stehe.\"\nMark: \"...\"\nMark: \"Na dann... auf ins Abenteuer Bürokratie.\"\n[[Answer:Mission7v7Travel|Mission7v7Travel]]",
+		"position": {
+			"x": 3364,
+			"y": 3388
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v7Travel",
+		"tags": "Mission7v7Travel",
+		"body": "[[ answer: |Mission7v7Close]]",
+		"position": {
+			"x": 3366,
+			"y": 3631
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v7Arrive",
+		"tags": "",
+		"body": "Mark: \"So, da sind wir.\" \nDu: \"Ah, okay. Ja dann lass und mal schauen. Ich kann's ja auch versuchen!\"\nMark: \"Klar, ich drück dir die Daumen. Vielleicht verstehst du das Ding ja!\"\n*Mark lächelt*\n[[Answer:Mission7v7Close|Mission7v7Close]]",
+		"position": {
+			"x": 3486,
+			"y": 3901
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v7Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3389,
+			"y": 4237
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v8",
+		"tags": "",
+		"body": "Mark: \"Jo... wie erwartet. Mein Antrag vom letzten Mal... abgelehnt.\"\nMark: \"'Fehlende Mitwirkung', wieder das gleiche Gelaber.\"\nMark: \"Ich hoff nur, dass ich diesmal wen erwische, der mich ernst nimmt.\"\nMark: \"Und? Wie lief's bei dir?\"\n[[ Gutes Gefühl. |Mission7v8Good]]\n[[ Kann's nicht einschätzen. |Mission7v8Dunno]]\n[[ Gar nichts verstanden. |Mission7v8Lost]]",
+		"position": {
+			"x": 3938,
+			"y": 4178
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v8Good",
+		"tags": "",
+		"body": "Mark: \"Echt? Das wär stark. Ich drück dir die Daumen!\"\nMark: \"Kannst mir ja irgendwann mal erklären, was ich so falsch mach.\"\n*Mark lächelt müde, aber ehrlich.*\n[[ Continue |Mission7v8End]]",
+		"position": {
+			"x": 3715,
+			"y": 4441
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v8Dunno",
+		"tags": "",
+		"body": "Mark: \"Ja... das Gefühl kenn ich.\"\"\nMark: \"Ist wie 'ne Klausur, für die du nie lernen konntest... weil's dir keiner gesagt hat.\"\n*Mark lächelt angestrengt*\n[[ Continue |Mission7v8End]]",
+		"position": {
+			"x": 3950,
+			"y": 4440
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v8Lost",
+		"tags": "",
+		"body": "Mark: \"Hmm... ja, das ist echt blöd.\"\nMark: \"Ich hoff trotzdem, dass es irgendwie reicht. Man darf ja noch träumen.\"\n[[ Continue |Mission7v8End]]",
+		"position": {
+			"x": 4204,
+			"y": 4431
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v8End",
+		"tags": "",
+		"body": "...\nMark: \"Weißt du... das alles frisst einen irgendwann auf.\"\nDu: \"Ich weiß. Aber du kämpfst trotzdem. Und irgendwann zahlt es sich aus!\"\n*Mark nickt*\nMark: \"Danke. Wirklich. Ich hoffe, was du sagst stimmt.\"\nMark: \"Ich bleib hier noch 'ne Weile sitzen. Brauch bisschen Ruhe.\"\nDu: \"Klar. Bis dann! Ich drück dir die Daumen wegen deinem Antrag!\"\nMark: \"Danke. Bis dann.\" \n[[Answer:Mission7v8Close|Mission7v8Close]]",
+		"position": {
+			"x": 3932,
+			"y": 4712
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v8Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 3922,
+			"y": 4965
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mission7v9",
+		"tags": "",
+		"body": "Du: \"Hey Mark, wie läufts bei dir?\"\nMark: \"Ah, schleppend. Aber was willst'e machen?\"\nMark: \"Hab jedenfalls einen neuen Antrag gestellt.\"\nMark: \"Der letzte wurde natürlich abgelehnt. Aber diesmal wird's was! Ich sags dir!\"\nDu: \"Ey, dann wünsch ich dir viel Glück!\"\nMark: \"Danke, dir auch!\"\n[[ answer: |Mission7v9Close]]",
+		"position": {
+			"x": 4502,
+			"y": 4864
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Mission7v9Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 4510,
+			"y": 5089
+		},
+		"colorID": 1
+	}
+]

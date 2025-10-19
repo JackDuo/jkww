@@ -1,0 +1,202 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "Guten Tag\n[[ Leistungen beantragen |LeistungenBeantragen]]\n[[ weiß nicht |NoIdea]]",
+		"position": {
+			"x": 572,
+			"y": 349
+		},
+		"colorID": 3
+	},
+	{
+		"title": "LeistungenBeantragen",
+		"tags": "",
+		"body": "Nun dann sind Sie hier leider richtig.\nIch muss kurz etwas vorbereiten, warten Sie bitte im Wartebereich.\nIch werde sie rufen.\n<<Wartebereich>> Ein Moment.\n[[ende|Close1]]",
+		"position": {
+			"x": 439,
+			"y": 587
+		},
+		"colorID": 3
+	},
+	{
+		"title": "NoIdea",
+		"tags": "",
+		"body": "Dann kann ich Ihnen auch nicht helfen.\nIch habe hierfür keine Zeit. \nDann informieren Sie sich bitte und machen einen neuen Termin aus.\n<< Leave >> Ich wünsche einen guten Tag. \n[[Answer:Weisnichtclose|Weisnichtclose]]",
+		"position": {
+			"x": 728,
+			"y": 577
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Weisnichtclose",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 805,
+			"y": 837
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Close1",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 435,
+			"y": 845
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Dialog2",
+		"tags": "",
+		"body": "So, Sie wollen Sozialleistungen beantragen?\nNun, dann füllen Sie bitte die notwendigen Anträge aus.\nHierzu sollte der HA genügen.\nSollten Sie in einer BG wohnen, fügen Sie bitte Antrag I bei.\nSofern Kinder in Ihrer BG wohnen, berücksichtigen Sie bitte Antrag E, H und F.\nSollten Sie stattdessen in einer HG wohnen, bitte Antrag H ausfüllen.\nWenn Sie Fragen haben, vereinbaren sie bitte online oder telefonisch einen Termin.\nBerücksichtigen Sie hierbei bitte die Geschäftszeiten.\n[[ Danke |Dialog2Danke]]\n[[ Hilfe? |Dialog2Hilfe]]",
+		"position": {
+			"x": 1370,
+			"y": 342
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Dialog2Danke",
+		"tags": "",
+		"body": "<< Formular >> Dann wünsche ich einen guten Tag.\n[[ Close |Dialog2Close]]",
+		"position": {
+			"x": 1411,
+			"y": 816
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Dialog2Hilfe",
+		"tags": "",
+		"body": "Es ist nicht vorgesehen, dass ich Ihnen helfe.\nLeider habe ich hier einiges zu tun.\nAm besten Sie füllen den Antrag selbst aus oder finden externe Unterstützung.\n[[ Danke |Dialog2Danke]]",
+		"position": {
+			"x": 1178,
+			"y": 575
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Dialog2Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 1430,
+			"y": 1057
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Dialog3",
+		"tags": "",
+		"body": "Guten Tag.\nWas ist denn Ihr Anliegen?\n[[ Antrag bewilligt? |Dialog3Bewilligt]]\n[[ Gehen |Dialog3Gehen]]",
+		"position": {
+			"x": 2124,
+			"y": 229
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3Bewilligt",
+		"tags": "",
+		"body": "Gut, dann müsste ich diesen kurz heraussuchen.\nEin Moment...\n...\n...\nSo, tatsächlich haben Sie vor kurzem einen Antrag gestellt.\nDieser wurde jedoch abgelehnt.\n[[ Was? Warum? |Dialog3Nichtbewillgtwas]]\n[[ Bin doch berechtigt! |Dialog3Nichtbewilligtberechtigt]]",
+		"position": {
+			"x": 1907,
+			"y": 491
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3Gehen",
+		"tags": "",
+		"body": "<< Leave >> Ähh, gut. Dann einen schönen Tag noch.\n[[ close |Dialog3Close]]",
+		"position": {
+			"x": 2207,
+			"y": 489
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3Nichtbewillgtwas",
+		"tags": "",
+		"body": "Lassen Sie mich mal nachsehen...\n[[ Weiter |Dialog3NichtbewillgtWeiter]]",
+		"position": {
+			"x": 1780,
+			"y": 766
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3Nichtbewilligtberechtigt",
+		"tags": "",
+		"body": "Gut, ich schaue mal nach.\nNun, soweit ich Ihnen das jetzt persönlich ohne rechtliche Geltung sagen kann...\n...sind sie dem Grunde nach berechtigt.\nJedoch erfüllte Ihr Antrag nicht die notwendigen Voraussetzungen.\n[[ Weiter |Dialog3NichtbewillgtWeiter]] |]]",
+		"position": {
+			"x": 2012,
+			"y": 777
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3NichtbewillgtWeiter",
+		"tags": "",
+		"body": "Der Antrag wurde aufgrund fehlender Mitwirkung abgelehnt.\nWie es scheint, haben Angaben gefehlt, die wichtig gewesen wären.\nLeider haben Sie keine Kontaktmöglichkeit angegeben...\n...somit hatten wir keine Möglichkeit für Rückfragen.\n[[ Hilfe? |Dialog3NichtBewHilfe]]\n[[ Was jetzt? |Dialog3NichtBewWeiter]]",
+		"position": {
+			"x": 1926,
+			"y": 1060
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3NichtBewHilfe",
+		"tags": "",
+		"body": "Nun, leider kann ich Ihnen hierbei nicht helfen.\nHierbei müssen Sie sich die Leistungen...\n...quasi... \n...selbst verdienen! Hehe.\nOder Sie finden externe Hilfe. \nIrgendjemand wird sich schon finden. [[Answer:Dialog3NichtBewWeiter|Dialog3NichtBewWeiter]]",
+		"position": {
+			"x": 1762,
+			"y": 1319
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3NichtBewWeiter",
+		"tags": "",
+		"body": "Nun, für das weitere Vorgehen kann ich Ihnen gerne einen neuen HA geben.\nWenn Sie ihn dieses mal vollständig einreichen, sollte er auch durch gehen.\nWas sagen Sie?\n[[ Ja. |Dialog3finalja]]\n[[ Nein |Dialog3finalnein]]",
+		"position": {
+			"x": 1967,
+			"y": 1570
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3finalja",
+		"tags": "",
+		"body": "<< Formular >> Gut, dann hier das Antragsformular.\n[[ close |Dialog3Close]]",
+		"position": {
+			"x": 1813,
+			"y": 1851
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3finalnein",
+		"tags": "",
+		"body": "<< Leave >> Dann wünsche ich einen guten Tag.\n[[ close |Dialog3Close]]",
+		"position": {
+			"x": 2073,
+			"y": 1851
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Dialog3Close",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 2283,
+			"y": 2231
+		},
+		"colorID": 1
+	}
+]
