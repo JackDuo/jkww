@@ -130,23 +130,22 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Main picture iframe section -->
-        <div class="pixel-border p-1 col-span-3 relative left-1/2 transform -translate-x-1/2 overflow-visible"
-             style="width: 125%; background-color: #f5f5dc;">
-
-            <div class="bg-black p-1 z-50">
-                <div class="aspect-ratio-16x9">
-                    <iframe
-                            id="gameFrame"
-                            src="/SGWohnungslosigkeit/index.html"
-                            frameborder="0"
-                            scrolling="no"
-                            style="border:none; overflow:hidden;"
-                            allowfullscreen>
-                    </iframe>
+        <div class="md:col-span-3 flex justify-center">
+            <div class="pixel-border bg-[#f5f5dc] p-2 w-full md:w-[120%] max-w-[1500px] relative z-10">
+                <div class="bg-black p-1">
+                    <div class="aspect-[16/9]">
+                        <iframe
+                                id="gameFrame"
+                                src="/SGWohnungslosigkeit/index.html"
+                                frameborder="0"
+                                scrolling="no"
+                                class="w-full h-full border-none overflow-hidden"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-
+                <div class="text-center text-sm mt-1">Spiel: Money doesn't grow on trees!</div>
             </div>
-            <div class="text-center text-sm mt-1">Spiel: Money doesn't grow on trees!</div>
         </div>
 
         <!-- Plain text section -->
