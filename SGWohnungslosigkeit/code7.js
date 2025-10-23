@@ -227,7 +227,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDFlaschenObjects2Objects, gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDBackpackObjects2Objects, false, runtimeScene, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43634188);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43652324);
 }
 }
 }
@@ -375,7 +375,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDFlaschenObjects2Objects, gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDBackpackObjects2Objects, true, runtimeScene, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43638252);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43656388);
 }
 }
 }
@@ -417,7 +417,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDTrashObjects1Objects, gdjs.TrashbinCode.mapOfGDgdjs_9546TrashbinCode_9546GDCollitionmaskObjects1Objects, false, runtimeScene, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43640228);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43658364);
 }
 }
 }
