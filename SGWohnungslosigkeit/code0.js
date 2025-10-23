@@ -277,7 +277,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.pickRandomObject(runtimeScene, gdjs.StartMenuCode.mapOfGDgdjs_9546StartMenuCode_9546GDCameraPathObjects3Objects);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40109404);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41289012);
 }
 }
 if (isConditionTrue_0) {
@@ -301,7 +301,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.pickRandomObject(runtimeScene, gdjs.StartMenuCode.mapOfGDgdjs_9546StartMenuCode_9546GDCameraPathObjects2Objects);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40110876);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41290340);
 }
 }
 }
@@ -343,7 +343,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40111108);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41290412);
 }
 }
 if (isConditionTrue_0) {
@@ -454,7 +454,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "Space");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40118380);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41297196);
 }
 }
 if (isConditionTrue_0) {
@@ -485,7 +485,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "OOOOOF") >= 3;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40120012);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41298564);
 }
 }
 if (isConditionTrue_0) {
@@ -579,7 +579,7 @@ gdjs.copyArray(gdjs.StartMenuCode.GDPfeilObjects2_1final, gdjs.StartMenuCode.GDP
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40121556);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41299884);
 }
 }
 if (isConditionTrue_0) {
@@ -651,7 +651,7 @@ gdjs.copyArray(gdjs.StartMenuCode.GDPfeilObjects2_1final, gdjs.StartMenuCode.GDP
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40127300);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41305388);
 }
 }
 if (isConditionTrue_0) {
@@ -828,7 +828,7 @@ gdjs.copyArray(runtimeScene.getObjects("WeiterButton"), gdjs.StartMenuCode.GDWei
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40133660);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41311548);
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(5).setNumber(runtimeScene.getScene().getVariables().getFromIndex(4).getAsNumber());
@@ -862,7 +862,7 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40134804);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41312300);
 }
 }
 if (isConditionTrue_0) {
@@ -890,7 +890,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDIntroTextObjects2.length;i<l;++i
 gdjs.StartMenuCode.GDIntroTextObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40138028);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41315012);
 }
 }
 if (isConditionTrue_0) {
@@ -1060,7 +1060,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDBackObjects1.length;i<l;++i) {
 gdjs.StartMenuCode.GDBackObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40113276);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41292500);
 }
 }
 if (isConditionTrue_0) {
@@ -1089,7 +1089,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDStartButtonObjects1.length;i<l;+
 gdjs.StartMenuCode.GDStartButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40114644);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41293772);
 }
 }
 if (isConditionTrue_0) {
@@ -1118,7 +1118,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterCharakterselectButtonObjec
 gdjs.StartMenuCode.GDWeiterCharakterselectButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40115796);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41294420);
 }
 }
 if (isConditionTrue_0) {
@@ -1147,7 +1147,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterIntroButtonObjects1.length
 gdjs.StartMenuCode.GDWeiterIntroButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40116556);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41293476);
 }
 }
 if (isConditionTrue_0) {
@@ -1213,7 +1213,7 @@ for (var i = 0, k = 0, l = gdjs.StartMenuCode.GDWeiterButtonObjects1.length;i<l;
 gdjs.StartMenuCode.GDWeiterButtonObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(40140716);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41318572);
 }
 }
 if (isConditionTrue_0) {

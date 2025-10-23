@@ -1,32 +1,32 @@
 
-if (typeof gdjs.evtsExt__Gamepads__StrongVibrationMagnitude !== "undefined") {
-  gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition !== "undefined") {
+  gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude = {};
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.idToCallbackMap = new Map();
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition = {};
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.userFunc0x1404920 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.userFunc0x14fbd30 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-const playerId = eventsFunctionContext.getArgument("Player_ID") - 1;
-eventsFunctionContext.returnValue = gdjs._extensionController.players[playerId].rumble.strongMagnitude;
+const game = runtimeScene.getGame();
+eventsFunctionContext.returnValue = game.isInGameEdition && game.isInGameEdition();
 };
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.userFunc0x1404920(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.userFunc0x14fbd30(runtimeScene, eventsFunctionContext);
 
 }
 
 
 };
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.func = function(runtimeScene, Player_ID, parentEventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.func = function(runtimeScene, parentEventsFunctionContext) {
 let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
@@ -35,8 +35,8 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("Gamepads"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("Gamepads"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("PanelSpriteSlider"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("PanelSpriteSlider"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -76,17 +76,16 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
-if (argName === "Player_ID") return Player_ID;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.eventsList0(runtimeScene, eventsFunctionContext);
 
 
-return Number(eventsFunctionContext.returnValue) || 0;
+return !!eventsFunctionContext.returnValue;
 }
 
-gdjs.evtsExt__Gamepads__StrongVibrationMagnitude.registeredGdjsCallbacks = [];
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.registeredGdjsCallbacks = [];

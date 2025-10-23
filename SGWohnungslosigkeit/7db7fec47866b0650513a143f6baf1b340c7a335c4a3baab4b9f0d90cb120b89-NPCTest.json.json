@@ -42,7 +42,7 @@
 	{
 		"title": "Mission2StartDialogInv",
 		"tags": "",
-		"body": "...: \"Ist alles okay? Du bist gerade umgekippt!\"\n[[ich weiß nicht...|Mission2DontKnow]]\n[[Alles okay!|Mission2ImFine]]",
+		"body": "...: \"Ist alles okay? Du bist gerade umgekippt!\"\n[[Ich weiß nicht...|Mission2DontKnow]]\n[[Alles okay!|Mission2ImFine]]",
 		"position": {
 			"x": 780,
 			"y": 162
