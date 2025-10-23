@@ -43627,6 +43627,39 @@ if (isConditionTrue_0) {
 
 {
 
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(19692164);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Kanal10Musik"), gdjs.OverworldCode.GDKanal10MusikObjects3);
+gdjs.copyArray(runtimeScene.getObjects("Kanal1Sound"), gdjs.OverworldCode.GDKanal1SoundObjects3);
+gdjs.copyArray(runtimeScene.getObjects("Kanal2UI"), gdjs.OverworldCode.GDKanal2UIObjects3);
+gdjs.copyArray(runtimeScene.getObjects("KanalMaster"), gdjs.OverworldCode.GDKanalMasterObjects3);
+{for(var i = 0, len = gdjs.OverworldCode.GDKanal1SoundObjects3.length ;i < len;++i) {
+    gdjs.OverworldCode.GDKanal1SoundObjects3[i].SetValue((gdjs.OverworldCode.GDKanal1SoundObjects3[i].Value(null)), null);
+}
+}
+{for(var i = 0, len = gdjs.OverworldCode.GDKanal2UIObjects3.length ;i < len;++i) {
+    gdjs.OverworldCode.GDKanal2UIObjects3[i].SetValue((gdjs.OverworldCode.GDKanal2UIObjects3[i].Value(null)), null);
+}
+}
+{for(var i = 0, len = gdjs.OverworldCode.GDKanal10MusikObjects3.length ;i < len;++i) {
+    gdjs.OverworldCode.GDKanal10MusikObjects3[i].SetValue((gdjs.OverworldCode.GDKanal10MusikObjects3[i].Value(null)), null);
+}
+}
+{for(var i = 0, len = gdjs.OverworldCode.GDKanalMasterObjects3.length ;i < len;++i) {
+    gdjs.OverworldCode.GDKanalMasterObjects3[i].SetValue((gdjs.OverworldCode.GDKanalMasterObjects3[i].Value(null)), null);
+}
+}
+}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("KanalMaster"), gdjs.OverworldCode.GDKanalMasterObjects3);
 
 let isConditionTrue_0 = false;
