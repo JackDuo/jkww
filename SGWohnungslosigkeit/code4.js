@@ -440,7 +440,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Dialogue"), gdjs.InterviewCode.GDDialogueObjects1);
 gdjs.copyArray(runtimeScene.getObjects("SpaceKey"), gdjs.InterviewCode.GDSpaceKeyObjects1);
-{gdjs.evtTools.debuggerTools.log(runtimeScene.getGame().getVariables().getFromIndex(4).getAsString(), "info", "1");
+{gdjs.evtTools.debuggerTools.log("InterviewID: " + runtimeScene.getGame().getVariables().getFromIndex(4).getAsString(), "info", "1");
 }
 {runtimeScene.getScene().getVariables().getFromIndex(2).setNumber(0);
 }

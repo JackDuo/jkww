@@ -802,6 +802,8 @@ gdjs.copyArray(runtimeScene.getObjects("Score2"), gdjs.StefanMinigameCode.GDScor
 }
 {runtimeScene.getScene().getVariables().getFromIndex(1).add(1);
 }
+{runtimeScene.getGame().getVariables().getFromIndex(7).getChild("StefansGame").getChild("Score").add(1);
+}
 {for(var i = 0, len = gdjs.StefanMinigameCode.GDScore2Objects1.length ;i < len;++i) {
     gdjs.StefanMinigameCode.GDScore2Objects1[i].getBehavior("Text").setText("Score: " + runtimeScene.getScene().getVariables().getFromIndex(1).getAsString());
 }
