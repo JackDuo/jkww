@@ -9,7 +9,7 @@ gdjs.evtsExt__CameraShake__Lacunarity = {};
 gdjs.evtsExt__CameraShake__Lacunarity.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CameraShake__Lacunarity.userFunc0x12d8030 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CameraShake__Lacunarity.userFunc0x11f3c18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const name = eventsFunctionContext.getArgument("Name");
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__CameraShake__Lacunarity.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__CameraShake__Lacunarity.userFunc0x12d8030(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CameraShake__Lacunarity.userFunc0x11f3c18(runtimeScene, eventsFunctionContext);
 
 }
 
