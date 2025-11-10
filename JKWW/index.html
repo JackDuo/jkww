@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jede*r kann wohnungslos werden! | Bachelorarbeit Soziale Arbeit | Serious Game über Wohnungslosigkeit </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!--Für die Umfrage-->
+    <script src="https://app.easy-feedback.com/integration.js?id=qze3xK1Hma&intid=Sk56c0IvZWYvK08ySTdIYnF5VUVodz09"></script>
+
+    <!-- HINWEIS: Wir fügen die VT323 Font für den langanhaltenden Widget-Text hinzu -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- CommentBox.io SDK: Traditionelle Einbindung, ohne data-site-id, damit wir es manuell aufrufen können -->
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js" defer></script>
+
+    <!-- Tailwind Konfiguration für Pixel-Art Farben und Fonts des Widgets -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Press Start 2P ist bereits über @import geladen
+                        mono: ['VT323', 'monospace'], // Für längeren Text im Widget
+                    },
+                    colors: {
+                        'pixel-dark': '#2a2a2a',
+                        'pixel-medium': '#555555',
+                        'pixel-light': '#aaaaaa',
+                        'pixel-accent': '#00ff00', // Neon Grün
+                        'pixel-bg': '#cccccc', // Hintergrundfarbe
+                        'pixel-blue': '#0000ff',
+                        'pixel-red': '#ff0000',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #363636;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjIZ0WxO5QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADJElEQVRo3u2av0sbURTHP29XRYuFQnFwq1Zxcejs4tq1i0uH/gcO/gEdnFwKOrl0cBFcCg6FQqHg4FBwcCg4OBQcHAoODgUH15dLuITLJcm9JO+9JN/wgST3knvP93vPPe+8u0AikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJDJw1gqFQhY4BD4Bz4ET4D3wBjgGdoFtYAEYAQ6AJeAV8BJYBz4AB8AOsAG8BkaBHWAZWARGgXVgDdgFNoFlYBq4AJaAOWAWWAJWgF1gG1gCZoBzYBGYB6aBRWAF2AO2gEVgGjgHFoB5YAJYAFaBfWALWACmgAvCwDwwDkwCK8A+sAksAFPABWFgDpgAxoFlYB/YAOaBSaBEGJgFxoAJYBl4C2wAs8AEUCYMzADjwCiwBLwD1oEZYBwoEwamgTFgBFgE3gNrwDQwBpQJA5PAGDAMLAAlYBWYAkaBMmFgAhgFhoAFoAysABPAEFAmDIwDI8AgsACUgGVgHBgEyoSBUWAE6AcWgBKwBIwB/UCZMDAKDAP9wDxQBBaBUaAPKBMGRoBhoA+YB4rAAjAC9AFlwsAwMAT0AXNAAZgHhoFeoEwYGAYGgV5gDigAc8AQ0AOUCQNDwCDQA8wCeWAGGAJ6gDJhYAgYBLqBGSAPTAODQDdQJgwMAgNANzAN5IEpYADoAsqEgQGgH+gCpoA8MAX0A11AmTAwAPQBncAkkAcmgX6gEygTBvqBPqATmADywATQB3QAZcJAP9ALdADjQB4YB/qADqBMGOgDeoF2YAzIA2NAL9AOlAkDvUAP0AaMAXlgFOgB2oAyYaAX6AHagFEgD4wA3UAbUCYM9ALdQBswAuSBYaAbaAXKhIEeoBtoBYaBPDAMdAOtQJkw0AN0Ay3AEJAHhoAuoAUoEwa6gS6gGRgE8sAg0AU0A2XCQBfQBTQBA0AeGAA6gSagTBjoBDqBRqAfyAP9QAfQCJQJAx1AB9AA9AF5oA/oAOqBMmGgHWgH6oE+IA/0Au1APVAmDLQBbUA90APkgR6gDagDyoSBNqAVqAN6gDzQDbQCtUCZMNAKtAB1QDeQB7qAFqAWKBMGWoBmoBboBPJAJ9AM1ABlwkAz0ATUAB1AHmgHmoBqoEwYaAKagGqgHcgDbUATUAWUCQONQCNQBbQBeaAVaASqgDJhoBFoBCqBViAPtAINQCVQJgw0AA1AJdAC5IFmoB6oAMqEgXqgHqgAmoE80ATUAxVAmTBQD9QDFUAjkAcagTqgHCgTBuqAOqAcqAfyQB1QC5QDZcJALVALlAG1QB6oBWqAMqBMGKgBaoAyoAbIA9VANVAGlAkD1UA1UAZUA3mgCqgCyoAyYaAKqAL+B9H3C5hqK1QGAAAAAElFTkSuQmCC');
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .newspaper {
+            background-color: #f5f5dc;
+            border: 8px double #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: visible;
+        }
+
+        .newspaper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+            pointer-events: none;
+        }
+
+        .pixel-border {
+            border: 4px solid black;
+            position: relative;
+        }
+
+        .pixel-border::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid black;
+            pointer-events: none;
+        }
+
+        .scrollable-text {
+            height: 300px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+
+        .scrollable-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        .links a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .links a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s ease;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+        /* Definiert das 16:9-Verhältnis */
+        .aspect-ratio-16x9 {
+            position: relative;
+            padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+            height: 0; /* Wichtig, um die Höhe ausschließlich über Padding zu steuern */
+        }
+
+        /* Passt den Inhalt (den iFrame) in das definierte Verhältnis ein */
+        .aspect-ratio-16x9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .scroll-lock {
+            overflow: hidden !important; /* Verhindert das Scrollen des Body-Inhalts */
+            height: 100vh !important;    /* Fixiert die Höhe des Viewports */
+        }
+
+        /* --- STILE FÜR DAS PIXEL-WIDGET --- */
+        /* Der Slide-Effekt wird durch eine Transition auf der transform-Eigenschaft erreicht */
+        .side-panel {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.7); /* Pixel-Art Schatten */
+            border: 4px solid #2a2a2a; /* Dicker Pixel-Rahmen */
+            background-color: #f0f0f0; /* Leicht abgesetzter Hintergrund */
+        }
+
+        .side-panel.open {
+            transform: translateX(0);
+        }
+
+        /* Styling für den aktiven Tab-Inhalt-Container */
+        .tab-content-container {
+            overflow-y: auto;
+            background-color: #e0e0e0; /* Inhaltshintergrund */
+            padding: 1.5rem; /* Etwas mehr Padding für den Pixel-Look */
+        }
+
+        /* Custom Button Style für Pixel-Art (Widget-Öffner) */
+        .pixel-btn {
+            border: 3px solid #2a2a2a;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.7);
+            padding: 0.75rem 1.25rem;
+            font-family: "Press Start 2P";
+            font-size: 0.7rem; /* Etwas kleiner für den Pixel-Look */
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.1s ease-out; /* Schnellerer Hover */
+        }
+
+        .pixel-btn:hover {
+            transform: translate(2px, 2px); /* Button schiebt sich bei Hover */
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.7);
+        }
+
+        .pixel-btn:active {
+            transform: translate(4px, 4px); /* Button schiebt sich bei Klick */
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.7);
+        }
+
+        /* Aktiver Tab-Button im Pixel-Stil */
+        .tab-btn.active {
+            background-color: #00ff00 !important; /* Neon Grün für aktiv */
+            color: #2a2a2a !important;
+            border-color: #2a2a2a !important;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.7) !important;
+        }
+
+        /* Normaler Tab-Button im Pixel-Stil */
+        .tab-btn {
+            border: 2px solid #555555;
+            background-color: #aaaaaa;
+            color: #2a2a2a;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+            font-family: 'VT323', monospace;
+            font-size: 1rem;
+            padding: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background-color: #dddddd;
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        .tab-btn:active:not(.active) {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+        }
+
+        /* Custom Styles für CommentBox Placeholder */
+        .commentbox-placeholder {
+            /* Diese Klasse wird nun nicht mehr verwendet, da wir den echten CommentBox-Div verwenden */
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #dddddd;
+            border: 3px dashed #555555;
+            color: #2a2a2a;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 0;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        /* Stellen Sie sicher, dass der CommentBox-Container den Platz ausfüllt */
+        .commentbox {
+            /* min-height: 100%; wird durch das Flexbox-Layout übernommen */
+            /* Tailwind min-h-full ist nicht nötig, da min-h-0 auf dem Parent ist */
+        }
+
+        /* Header des Panels */
+        .panel-header {
+            background-color: #555555; /* Dunklerer Header */
+            border-bottom: 4px solid #2a2a2a;
+            color: #00ff00; /* Neon-Akzent */
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        /* Close Button Pixel-Art */
+        .close-btn {
+            border: 2px solid #2a2a2a;
+            background-color: #ff0000; /* Rot für schließen */
+            color: #ffffff;
+            font-family: 'Press Start 2P';
+            font-size: 0.7rem;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.7);
+        }
+        .close-btn:hover {
+            background-color: #cc0000;
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.7);
+        }
+        .close-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.7);
+        }
+
+        /* Sidebar Navigation im Pixel-Stil */
+        .panel-nav {
+            background-color: #2a2a2a; /* Dunkle Sidebar */
+            border-left: 4px solid #2a2a2a;
+            padding: 1rem;
+        }
+
+        /* Pixel Speech Bubble SVG Styling */
+        .pixel-speech-bubble {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .pixel-speech-bubble path {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+<!-- WIDGET: 1. Der Overlay (wird von der Widget-Funktion gesteuert) -->
+<div id="widget-overlay" onclick="togglePanel(false)"
+     class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0">
+</div>
+
+<div class="newspaper pixel-border p-8 max-w-7xl mx-auto w-full">
+    <header class="mb-8 text-center">
+        <h1 class="text-4xl mb-6 mt-2">ABSCHLUSSARBEIT SOZIALE ARBEIT</h1>
+        <div class="flex justify-between items-center text-sm mb-2">
+            <span>VOL. 1, NO. 1</span>
+            <span>SEIT 2025</span>
+            <span>PREIS: 0¢</span>
+        </div>
+        <hr class="border-t-2 border-black my-2">
+        <h2 class="text-2xl mb-3 mt-3">Konzeptarbeit</h2>
+        <hr class="border-t-2 border-black my-2">
+        <div class="flex justify-between text-xs mt-4">
+            <span>THEMA: Serious Game über Wohnungslosigkeit </span>
+            <span>MONTAG, JANUAR 5, 2025</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Main picture iframe section -->
+        <div class="md:col-span-3 flex justify-center">
+            <div class="pixel-border bg-[#f5f5dc] p-2 w-full md:w-[120%] max-w-[1500px] relative z-10">
+                <div class="bg-black p-1">
+                    <div class="aspect-[16/9]">
+                        <iframe
+                                id="gameFrame"
+                                src="/SGWohnungslosigkeit/index.html"
+                                frameborder="0"
+                                scrolling="no"
+                                class="w-full h-full border-none overflow-hidden"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="text-center text-sm mt-1">Spiel: Jede*r kann wohnungslos werden!</div>
+            </div>
+        </div>
+
+        <!-- Plain text section -->
+        <div class="pixel-border p-4 md:col-span-2">
+            <h3 class="text-xl mb-4 underline">Über das Spiel</h3>
+            <div class="text-sm">
+                <p class="mb-4">
+                    Dieses Projekt ist die konzeptionelle Ausarbeitung eines digitalen Serious Games im Rahmen einer Bachelorarbeit. Ziel ist es, die Lebensrealität wohnungsloser Menschen für eine breite Öffentlichkeit erfahrbar zu machen, zu Sensibilisieren und Empathie zu fördern.
+                </p>
+                <p class="mb-4">
+                    Die gesamte Konzeption folgt sozialarbeiterischen Methodiken (Koproduktion, Beteiligung, Advocacy, Menschenrechtsbildung, etc.) und anerkannten Game-Design-Prinzipien, um eine tiefgreifende Perspektive und Immersion zu ermöglichen. Die wissenschaftliche Leistung liegt in der systematischen Übersetzung von sozialer Ungleichheit in spielbare Systeme.
+                </p>
+                <p>
+                    Die Einblicke in die Wohnungs- bzw. Obdachlosigkeit wurde durch einige Mitwirkende ermöglicht, die ihre eigene Geschichte als Betroffene und ehemals Betroffene geteilt haben. Ich danke den Mitwirkenden für ihr Vertrauen und die Möglichmachung des Projektes!
+                </p>
+            </div>
+        </div>
+
+        <!-- Links section -->
+        <div class="pixel-border p-4 md:col-span-1">
+            <h3 class="text-xl mb-4 underline">Wichtige Links</h3>
+            <div class="links space-y-4 text-sm">
+                <a href="https://jackduo.de/SGWohnungslosigkeit/" class="block hover:text-red-600">• Spiel auf Vollbild (vorher speichern)</a>
+                <a href="https://easy-feedback.de/umfrage/2034510/614z8lC" class="block hover:text-red-600">• Umfrage zum Pretest</a>
+            </div>
+        </div>
+
+
+        <!-- Scrollable text section -->
+        <div class="pixel-border p-4 col-span-3">
+            <h3 class="text-xl mb-4 underline">Quellen</h3>
+            <div class="scrollable-text text-sm">
+                <p class="mb-4">[1] Borstel, Dierk; Brückmann, Jennifer; Nübold, Laura; Pütter, Bastian; Sonnenberg, Tim (Hg.) (2025): Handbuch Wohnungs- und Obdachlosigkeit. 1st ed. 2025. Wiesbaden: Springer Fachmedien Wiesbaden; Imprint Springer VS.</p>
+
+                <p class="mb-4">[2] Bundesarbeitsgemeinschaft Wohnungslosenhilfe e.V (2025): Gesundheit und medizinische Versorgung wohnungsloser Menschen. Online verfügbar unter <a href="https://www.bagw.de/de/themen/gesundheit/uebersicht" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.bagw.de/de/themen/gesundheit/uebersicht</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[3] Bundesarbeitsgemeinschaft Wohnungslosenhilfe e.V. (2023): Mindestens 607.000 Menschen in Deutschland wohnungslos. Online verfügbar unter <a href="https://www.bagw.de/de/themen/zahl-der-wohnungslosen/uebersicht" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.bagw.de/de/themen/zahl-der-wohnungslosen/uebersicht</a>, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[4] Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen (Hrsg.) (2024): Wohnungs­losenbericht der Bundesregierung. Ausmaß und Struktur von Wohnungslosigkeit. Online verfügbar unter <a href="https://www.bmwsb.bund.de/SharedDocs/downloads/DE/veroeffentlichungen/wohnen/wohnungslosenbericht-2024.pdf?__blob=publicationFile&v=1" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.bmwsb.bund.de/SharedDocs/downloads/DE/veroeffentlichungen/wohnen/wohnungslosenbericht-2024.pdf</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[5] Deutschlandfunk Nova (2021): Keine Wohnung. Wenn wir bei anderen schlafen müssen. In: Deutschlandfunk Nova, 22.12.2021. Online verfügbar unter <a href="https://www.deutschlandfunknova.de/beitrag/wohnungslos-wenn-du-keine-wohnung-hast" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.deutschlandfunknova.de/beitrag/wohnungslos-wenn-du-keine-wohnung-hast</a>, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[6] Diakonie Deutschland (2025): Nachgefragt: Obdachlose Menschen im Sommer nicht vergessen. Online verfügbar unter <a href="https://www.diakonie.de/informieren/infothek/2023/juli/nachgefragt-obdachlose-menschen-im-sommer-nicht-vergessen" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.diakonie.de/informieren/infothek/2023/juli/nachgefragt-obdachlose-menschen-im-sommer-nicht-vergessen</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[7] Diakonie Hessen (2025): Tag der Wohnungslosen: Medizinische Versorgung wohnungsloser Menschen erschwert - Diakonie Hessen. Online verfügbar unter <a href="https://www.diakonie-hessen.de/presse/2025/september/tag-der-wohnungslosen-medizinische-versorgung-wohnungsloser-menschen-erschwert" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.diakonie-hessen.de/presse/2025/september/tag-der-wohnungslosen-medizinische-versorgung-wohnungsloser-menschen-erschwert</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[8] Evangelische Kirche in Hessen und Nassau: Hilfe für obdachlose Menschen im Winter - EKHN. Online verfügbar unter <a href="https://www.ekhn.de/themen/obdachlosigkeit/wohnungsnothilfe-nachrichten/hilfe-fuer-obdachlose-menschen-im-winter" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.ekhn.de/themen/obdachlosigkeit/wohnungsnothilfe-nachrichten/hilfe-fuer-obdachlose-menschen-im-winter</a>, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[9] Franziskustreff-Stiftung Frankfurt (2025): In der Regel besonders schwierig. Frankfurt. Online verfügbar unter <a href="https://www.franziskustreff.de/informieren/obdachlosigkeit-bei-frauen/ueberleben-in-der-frauzone/in-der-regel-besonders-schwierig" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.franziskustreff.de/informieren/obdachlosigkeit-bei-frauen/ueberleben-in-der-frauzone/in-der-regel-besonders-schwierig</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[10] Kipping, Katja; Arbeiter-Samariter-Bund Deutschland; AWO Bundesverband; Der Paritätische Gesamtverband; Deutscher Mieterbund; Diakonie Deutschland et al. (2025): Offener Brief an die Abgeordneten des Deutschen Bundestages. Stoppen Sie die geplanten Verschärfungen bei den Kosten der Unterkunft, verhindern Sie Wohnungslosigkeit! Online verfügbar unter <a href="https://www.der-paritaetische.de/fileadmin/user_upload/251021_brief_kdu.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.der-paritaetische.de/fileadmin/user_upload/251021_brief_kdu.pdf</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[11] Presse- und Informationsamt der Bundesregierung (2022): Rede von Bundespräsident Dr. Frank-Walter Steinmeier. bei einem Gesprächsforum zum Tag der Wohnungslosen am 11. September 2022 in Berlin. Berlin. Online verfügbar unter <a href="https://www.bundesregierung.de/breg-de/service/newsletter-und-abos/bulletin/rede-von-bundespraesident-dr-frank-walter-steinmeier-2125244" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.bundesregierung.de/breg-de/service/newsletter-und-abos/bulletin/rede-von-bundespraesident-dr-frank-walter-steinmeier-2125244</a>, zuletzt aktualisiert am 22.10.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[12] Sonnenberg, Tim (2023): In Deutschland muss niemand wohnungslos sein – Diskriminierung von wohnungslosen Personen. Wiesbaden: Springer VS. Online verfügbar unter <a href="https://link.springer.com/rwe/10.1007/978-3-658-35279-0_29-1#citeas" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://link.springer.com/rwe/10.1007/978-3-658-35279-0_29-1#citeas</a>.</p>
+
+                <p class="mb-4">[13] Statistisches Bundesamt (2022): GENESIS-Online - Statistik 'Statistik untergebrachter wohnungsloser Personen'. Wiesbaden. Online verfügbar unter <a href="https://www-genesis.destatis.de/datenbank/online/statistic/22971/details" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www-genesis.destatis.de/datenbank/online/statistic/22971/details</a>, zuletzt aktualisiert am 11.09.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[14] Statistisches Bundesamt (2025): 474&nbsp;700 untergebrachte wohnungslose Personen Ende Januar 2025 in Deutschland. Online verfügbar unter <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/07/PD25_246_229.html" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/07/PD25_246_229.html</a>, zuletzt aktualisiert am 08.07.2025, zuletzt geprüft am 22.10.2025.</p>
+
+                <p class="mb-4">[15] Universität Bremen; Sophie Horstmann: Intersektionalität. Online verfügbar unter <a href="https://www.uni-bremen.de/divergestool-projekt/divergestool-toolbox/geschlechterkonzept/intersektionalitaet" target="_blank" rel="noopener noreferrer" class="text-gray-600 underline hover:text-red-600">https://www.uni-bremen.de/divergestool-projekt/divergestool-toolbox/geschlechterkonzept/intersektionalitaet</a>, zuletzt geprüft am 23.10.2025.</p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-center text-xs">
+        <hr class="border-t-2 border-black my-2">
+        <p> © 2025 Jason Braun. </p>
+        <p> Lizensiert unter der Creative Commons Lizenz (CC BY-NC-SA 4.0 International). </p>
+    </footer>
+</div>
+
+<!-- WIDGET: 2. Der Button im Div-Container -->
+<div id="widget-container" class="fixed bottom-8 right-8 z-30">
+    <button id="open-panel-button" onclick="togglePanel(true)"
+            class="pixel-btn bg-pixel-blue text-white flex items-center">
+        <!-- Pixel-Art Sprechblase SVG Icon -->
+        <svg class="pixel-speech-bubble" viewBox="0 0 24 24">
+            <path d="M2 2h14v14H9l-7 7V2z" fill="#fff" stroke="#2a2a2a" stroke-width="2"/>
+        </svg>
+        <span>Teile deine Meinung!</span>
+    </button>
+</div>
+
+<!-- WIDGET: 3. Das Slide-In Fenster (Side-Panel) -->
+<div id="side-panel"
+     class="side-panel fixed top-0 left-0 h-full w-full lg:w-3/4 xl:max-w-4xl z-50 flex flex-col">
+
+    <!-- Header des Panels -->
+    <header class="panel-header flex justify-between items-center">
+        <h2 class="text-xl">Kommentare</h2>
+        <button onclick="togglePanel(false)" aria-label="Fenster schließen"
+                class="close-btn">
+            X
+        </button>
+    </header>
+
+    <!-- Hauptbereich: Links Content, Rechts Tabs -->
+    <div class="flex flex-grow overflow-hidden">
+
+        <!-- Linke Seite: Tab-Inhalt (Flex-Grow, nimmt den meisten Platz ein) -->
+        <!-- FIX: Die Klasse 'min-h-0' stellt sicher, dass das Element seine Höhe respektiert und das innere Scrollen funktioniert. -->
+        <div id="tab-content-area" class="flex-grow tab-content-container min-h-0">
+            <!-- Der Inhalt des aktiven Tabs wird hier eingefügt -->
+        </div>
+
+        <!-- Rechte Seite: Register-Navigation (Feste Breite, Hintergrund leicht abgesetzt) -->
+        <nav class="flex-shrink-0 w-32 md:w-48 panel-nav flex flex-col p-2 space-y-2">
+
+            <!-- Tab 1: Allgemein -->
+            <button data-thread-id="general" onclick="switchTab('general', this)"
+                    class="tab-btn">
+                Allgemein
+            </button>
+
+            <!-- Tab 2: Reflexion (ehemals Features) -->
+            <button data-thread-id="features" onclick="switchTab('features', this)"
+                    class="tab-btn">
+                Reflexion
+            </button>
+
+            <!-- Tab 3: Bugs -->
+            <button data-thread-id="bugs" onclick="switchTab('bugs', this)"
+                    class="tab-btn">
+                Bugs
+            </button>
+
+        </nav>
+    </div>
+</div>
+
+
+<script>
+    feather.replace();
+
+    // Add some pixelated noise effect
+    document.addEventListener('DOMContentLoaded', () => {
+        const newspaper = document.querySelector('.newspaper');
+        const noise = document.createElement('div');
+        noise.style.position = 'absolute';
+        noise.style.top = '0';
+        noise.style.left = '0';
+        noise.style.width = '100%';
+        noise.style.height = '100%';
+        noise.style.backgroundImage = 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjIZ0WxO5QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADJElEQVRo3u2av0sbURTHP29XRYuFQnFwq1Zxcejs4tq1i0uH/gcO/gEdnFwKOrl0cBFcCg6FQqHg4FBwcCg4OBQcHAoODgUH15dLuITLJcm9JO+9JN/wgST3knvP93vPPe+8u0AikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJDJw1gqFQhY4BD4Bz4ET4D3wBjgGdoFtYAEYAQ6AJeAV8BJYBz4AB8AOsAG8BkaBHWAZWARGgXVgDdgFNoFlYBq4AJaAOWAWWAJWgF1gG1gCZoBzYBGYB6aBRWAF2AO2gEVgGjgHFoB5YAJYAFaBfWALWACmgAvCwDwwDkwCK8A+sAksAFPABWFgDpgAxoFlYB/YAOaBSaBEGJgFxoAJYBl4C2wAs8AEUCYMzADjwCiwBLwD1oEZYBwoEwamgTFgBFgE3gNrwDQwBpQJA5PAGDAMLAAlYBWYAkaBMmFgAhgFhoAFoAysABPAEFAmDIwDI8AgsACUgGVgHBgEyoSBUWAE6AcWgBKwBIwB/UCZMDAKDAP9wDxQBBaBUaAPKBMGRoBhoA+YB4rAAjAC9AFlwsAwMAT0AXNAAZgHhoFeoEwYGAYGgV5gDigAc8AQ0AOUCQNDwCDQA8wCeWAGGAJ6gDJhYAgYBLqBGSAPTAODQDdQJgwMAgNANzAN5IEpYADoAsqEgQGgH+gCpoA8MAX0A11AmTAwAPQBncAkkAcmgX6gEygTBvqBPqATmADywATQB3QAZcJAP9ALdADjQB4YB/qADqBMGOgDeoF2YAzIA2NAL9AOlAkDvUAP0AaMAXlgFOgB2oAyYaAX6AHagFEgD4wA3UAbUCYM9ALdQBswAuSBYaAbaAXKhIEeoBtoBYaBPDAMdAOtQJkw0AN0Ay3AEJAHhoAuoAUoEwa6gS6gGRgE8sAg0AU0A2XCQBfQBTQBA0AeGAA6gSagTBjoBDqBRqAfyAP9QAfQCJQJAx1AB9AA9AF5oA/oAOqBMmGgHWgH6oE+IA/0Au1APVAmDLQBbUA90APkgR6gDagDyoSBNqAVqAN6gDzQDbQCtUCZMNAKtAB1QDeQB7qAFqAWKBMGWoBmoBboBPJAJ9AM1ABlwkAz0ATUAB1AHmgHmoBqoEwYaAKagGqgHcgDbUATUAWUCQONQCNQBbQBeaAVaASqgDJhoBFoBCqBViAPtAINQCVQJgw0AA1AJdAC5IFmoB6oAMqEgXqgHqgAmoE80ATUAxVAmTBQD9QDFUAjkAcagTqgHCgTBuqAOqAcqAfyQB1QC5QDZcJALVALlAG1QB6oBWqAMqBMGKgBaoAyoAbIA9VANVAGlAkD1UA1UAZUA3mgCqgCyoAyYaAKqAL+B9H3C5hqK1QGAAAAAElFTkSuQmCC")';
+        noise.style.opacity = '0.03';
+        noise.style.pointerEvents = 'none';
+        newspaper.appendChild(noise);
+
+        // Laden des ersten Tabs beim Start
+        const initialTabButton = document.querySelector(`[data-thread-id="${activeThreadId}"]`);
+        if (initialTabButton) {
+            switchTab(activeThreadId, initialTabButton);
+        }
+    });
+
+    // --- WIDGET LOGIK VARIABLEN ---
+    const panel = document.getElementById('side-panel');
+    const overlay = document.getElementById('widget-overlay');
+    const tabContentArea = document.getElementById('tab-content-area');
+    const gameFrame = document.getElementById("gameFrame");
+    let activeThreadId = 'general';
+    // Site ID aus dem Skript-Tag des vorherigen Zustands für manuelle Initialisierung
+    const SITE_ID = '5739755899715584-proj';
+
+    // --- WIDGET LOGIK FUNKTIONEN ---
+
+    /**
+     * Schiebt das Panel rein und raus und verwaltet den Scroll-Lock.
+     * @param {boolean} open - True zum Öffnen, False zum Schließen.
+     */
+    function togglePanel(open) {
+        if (open) {
+            // Öffnen: Panel sichtbar machen und Scrollen der Hauptseite verhindern
+            panel.classList.add('open');
+            overlay.classList.remove('hidden', 'opacity-0');
+            document.body.classList.add('scroll-lock'); // Scroll Lock aktivieren
+            setTimeout(() => overlay.classList.add('opacity-100'), 10);
+        } else {
+            // Schließen: Panel ausblenden und Scrollen der Hauptseite erlauben
+            panel.classList.remove('open');
+            overlay.classList.remove('opacity-100');
+            document.body.classList.remove('scroll-lock'); // Scroll Lock deaktivieren
+            setTimeout(() => {
+                overlay.classList.add('hidden', 'opacity-0');
+            }, 300);
+        }
+    }
+
+
+    /**
+     * Lädt den CommentBox.io-Thread für die gegebene ID.
+     * @param {string} threadId - Die eindeutige ID für den Kommentar-Thread.
+     */
+    function renderCommentBox(threadId) {
+
+        // 1. Zuerst den Container leeren
+        tabContentArea.innerHTML = '';
+
+        // 2. Den neuen CommentBox Container dynamisch erstellen (class="commentbox" + unique ID)
+        const commentDiv = document.createElement('div');
+        commentDiv.id = threadId;
+        commentDiv.className = 'commentbox';
+        tabContentArea.appendChild(commentDiv);
+
+        activeThreadId = threadId;
+
+        // 3. Manuelle Initialisierung des CommentBox-Widgets für das neu eingefügte Element
+        if (typeof commentBox === 'function') {
+            commentBox(SITE_ID);
+        } else {
+            // Fallback, falls die Bibliothek noch nicht geladen ist (sollte bei 'defer' selten passieren)
+            tabContentArea.innerHTML += `
+                <div class="mt-4 text-sm text-pixel-red bg-red-100 p-4 border border-pixel-red font-mono">
+                    FEHLER: CommentBox.io konnte nicht geladen werden. Bitte prüfen Sie die Site ID und die Netzwerkverbindung.
+                </div>
+            `;
+        }
+    }
+
+    /**
+     * Wechselt den aktuell angezeigten Tab.
+     * @param {string} threadId - Die ID des zu ladenden Kommentar-Threads.
+     * @param {HTMLElement} clickedButton - Der Button, der geklickt wurde.
+     */
+    function switchTab(threadId, clickedButton) {
+        // 1. Alle Buttons zurücksetzen (Styling)
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // 2. Aktuellen Button hervorheben
+        clickedButton.classList.add('active');
+
+        // 3. Inhalt neu laden (lädt den CommentBox-Container und initialisiert ihn manuell)
+        renderCommentBox(threadId);
+    }
+
+    // --- BESTEHENDE SCROLL-LOGIK ---
+
+    // Scroll deaktivieren
+    function disableScroll() {
+        document.body.style.overflow = "hidden";
+    }
+
+    // Scroll wieder aktivieren
+    function enableScroll() {
+        // Nur aktivieren, wenn das Widget nicht geöffnet ist
+        if (!panel.classList.contains('open')) {
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    // Wenn iframe angeklickt / Fokus bekommt
+    gameFrame.addEventListener("mouseenter", () => {
+        disableScroll();
+    });
+    gameFrame.addEventListener("click", () => {
+        disableScroll();
+    });
+
+    // Wenn Maus den iframe verlässt → Scroll wieder aktivieren
+    gameFrame.addEventListener("mouseleave", () => {
+        enableScroll();
+    });
+
+    // Falls außerhalb irgendwo geklickt wird → Scroll wieder aktivieren
+    document.addEventListener("click", (e) => {
+        // Sicherstellen, dass der Klick nicht Teil des Widgets oder des GameFrames war
+        if (!gameFrame.contains(e.target) && !panel.contains(e.target) && !document.getElementById('widget-container').contains(e.target)) {
+            enableScroll();
+        }
+    });
+
+</script>
+</body>
+</html>
