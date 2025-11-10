@@ -30,10 +30,10 @@
                         'pixel-dark': '#2a2a2a',
                         'pixel-medium': '#555555',
                         'pixel-light': '#aaaaaa',
-                        'pixel-accent': '#00ff00', // Neon Grün
+                        'pixel-accent': '#432588', // Neon Grün
                         'pixel-bg': '#cccccc', // Hintergrundfarbe
-                        'pixel-blue': '#0000ff',
-                        'pixel-red': '#ff0000',
+                        'pixel-blue': '#351d65',
+                        'pixel-red': '#770808',
                     }
                 }
             }
@@ -153,13 +153,13 @@
         /* Styling für den aktiven Tab-Inhalt-Container */
         .tab-content-container {
             overflow-y: auto;
-            background-color: #e0e0e0; /* Inhaltshintergrund */
+            background-color: #f5f5dc; /* Inhaltshintergrund */
             padding: 1.5rem; /* Etwas mehr Padding für den Pixel-Look */
         }
 
         /* Custom Button Style für Pixel-Art (Widget-Öffner) */
         .pixel-btn {
-            border: 3px solid #2a2a2a;
+            border: 3px solid #5a3f95;
             box-shadow: 4px 4px 0px rgba(0,0,0,0.7);
             padding: 0.75rem 1.25rem;
             font-family: "Press Start 2P";
@@ -181,17 +181,17 @@
 
         /* Aktiver Tab-Button im Pixel-Stil */
         .tab-btn.active {
-            background-color: #00ff00 !important; /* Neon Grün für aktiv */
-            color: #2a2a2a !important;
-            border-color: #2a2a2a !important;
+            background-color: #351d65 !important; /* Neon Grün für aktiv */
+            color: #f5f5dc !important;
+            border-color: #5a3f95 !important;
             box-shadow: 2px 2px 0px rgba(0,0,0,0.7) !important;
         }
 
         /* Normaler Tab-Button im Pixel-Stil */
         .tab-btn {
             border: 2px solid #555555;
-            background-color: #aaaaaa;
-            color: #2a2a2a;
+            background-color: #a5a5a5;
+            color: #363636;
             box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
             font-family: 'VT323', monospace;
             font-size: 1rem;
@@ -201,7 +201,7 @@
         }
 
         .tab-btn:hover:not(.active) {
-            background-color: #dddddd;
+            background-color: #f5f5dc;
             transform: translate(1px, 1px);
             box-shadow: 1px 1px 0px rgba(0,0,0,0.5);
         }
@@ -218,9 +218,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #dddddd;
-            border: 3px dashed #555555;
-            color: #2a2a2a;
+            background-color: #f5f5dc;
+            border: 3px dashed #363636;
+            color: #363636;
             text-align: center;
             padding: 2rem;
             border-radius: 0;
@@ -235,11 +235,12 @@
             /* Tailwind min-h-full ist nicht nötig, da min-h-0 auf dem Parent ist */
         }
 
+
         /* Header des Panels */
         .panel-header {
-            background-color: #555555; /* Dunklerer Header */
-            border-bottom: 4px solid #2a2a2a;
-            color: #00ff00; /* Neon-Akzent */
+            background-color: #5c5c5c; /* Dunklerer Header */
+            border-bottom: 4px solid #363636;
+            color: #f5f5dc; /* Neon-Akzent */
             font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
             font-size: 1rem;
@@ -249,7 +250,7 @@
         /* Close Button Pixel-Art */
         .close-btn {
             border: 2px solid #2a2a2a;
-            background-color: #ff0000; /* Rot für schließen */
+            background-color: #770808; /* Rot für schließen */
             color: #ffffff;
             font-family: 'Press Start 2P';
             font-size: 0.7rem;
@@ -261,7 +262,7 @@
             box-shadow: 2px 2px 0px rgba(0,0,0,0.7);
         }
         .close-btn:hover {
-            background-color: #cc0000;
+            background-color: #b10606;
             transform: translate(1px, 1px);
             box-shadow: 1px 1px 0px rgba(0,0,0,0.7);
         }
@@ -503,7 +504,13 @@
     const SITE_ID = '5739755899715584-proj';
 
     // --- WIDGET LOGIK FUNKTIONEN ---
-
+    commentBox('5739755899715584-proj', {
+        textColor: '#363636',
+        backgroundColor: null, // default transparent
+        fontfamily: 'VT323',
+        color: '#5a3f95',
+        lang: 'de-DE'
+    });
     /**
      * Schiebt das Panel rein und raus und verwaltet den Scroll-Lock.
      * @param {boolean} open - True zum Öffnen, False zum Schließen.
