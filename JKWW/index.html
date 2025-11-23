@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
     <!--Für die Umfrage-->
-    <script src="https://app.easy-feedback.com/integration.js?id=qze3xK1Hma&intid=Sk56c0IvZWYvK08ySTdIYnF5VUVodz09"></script>
+    <script src="https://app.easy-feedback.com/integration.js?id=qze3xK1Hma&intid=WXhRQ3ZVWTl3bkdCVXVxaGtQQkFJQT09"></script>
 
     <!-- HINWEIS: Wir fügen die VT323 Font für den langanhaltenden Widget-Text hinzu -->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -346,10 +346,13 @@
                     Dieses Projekt ist die konzeptionelle Ausarbeitung eines digitalen Serious Games im Rahmen einer Bachelorarbeit. Ziel ist es, die Lebensrealität wohnungsloser Menschen für eine breite Öffentlichkeit erfahrbar zu machen, zu Sensibilisieren und Empathie zu fördern.
                 </p>
                 <p class="mb-4">
-                    Die gesamte Konzeption folgt sozialarbeiterischen Methodiken (Koproduktion, Beteiligung, Advocacy, Menschenrechtsbildung, etc.) und anerkannten Game-Design-Prinzipien, um eine tiefgreifende Perspektive und Immersion zu ermöglichen. Die wissenschaftliche Leistung liegt in der systematischen Übersetzung von sozialer Ungleichheit in spielbare Systeme.
+                    Die gesamte Konzeption beruht auf sozialarbeiterischen Methodiken und anerkannten Game-Design-Prinzipien, um eine tiefgreifende Perspektive und Immersion zu ermöglichen. Die wissenschaftliche Leistung liegt in der systematischen Übersetzung von sozialer Ungleichheit bzw. Exklusion in ein niedrigschwelliges spielbares Bildungswerkzeug.
+                </p>
+                <p class="mb-4">
+                    Die Einblicke in die Wohnungs- bzw. Obdachlosigkeit wurde durch einige Mitwirkende ermöglicht, die ihre eigene Geschichte als (ehemals) Betroffene geteilt haben. Ich danke den Mitwirkenden für ihr Vertrauen und die Möglichmachung des Projektes!
                 </p>
                 <p>
-                    Die Einblicke in die Wohnungs- bzw. Obdachlosigkeit wurde durch einige Mitwirkende ermöglicht, die ihre eigene Geschichte als Betroffene und ehemals Betroffene geteilt haben. Ich danke den Mitwirkenden für ihr Vertrauen und die Möglichmachung des Projektes!
+                    Auf der rechten Seite ist eine "Umfrage"-Lasche zu finden, mit der du die Bachelorarbeit unterstützen kannst. Mit dem Button "Was hast du gelernt?" kannst du ein Reflexionsforum öffnen, bei dem du deine Erkenntnisse teilen und dich mit anderen austauschen kannst.
                 </p>
             </div>
         </div>
@@ -358,8 +361,8 @@
         <div class="pixel-border p-4 md:col-span-1">
             <h3 class="text-xl mb-4 underline">Wichtige Links</h3>
             <div class="links space-y-4 text-sm">
-                <a href="https://jackduo.de/SGWohnungslosigkeit/" class="block hover:text-red-600">• Spiel auf Vollbild (vorher speichern)</a>
-                <a href="https://easy-feedback.de/umfrage/2034510/614z8lC" class="block hover:text-red-600">• Umfrage zum Pretest</a>
+                <a href="https://jackduo.de/SGWohnungslosigkeit/" class="block hover:text-red-600">• Spiel auf Vollbild (vorher speichern!)</a>
+                <a href="https://easy-feedback.de/umfrage/2064019/9sSql9d" class="block hover:text-red-600">• Umfrage zum Pretest</a>
             </div>
         </div>
 
@@ -418,7 +421,7 @@
         <svg class="pixel-speech-bubble" viewBox="0 0 24 24">
             <path d="M2 2h14v14H9l-7 7V2z" fill="#fff" stroke="#2a2a2a" stroke-width="2"/>
         </svg>
-        <span>Teile deine Meinung!</span>
+        <span>Was hast du gelernt?</span>
     </button>
 </div>
 
@@ -504,13 +507,7 @@
     const SITE_ID = '5739755899715584-proj';
 
     // --- WIDGET LOGIK FUNKTIONEN ---
-    commentBox('5739755899715584-proj', {
-        textColor: '#363636',
-        backgroundColor: null, // default transparent
-        fontfamily: 'VT323',
-        color: '#5a3f95',
-        lang: 'de-DE'
-    });
+
     /**
      * Schiebt das Panel rein und raus und verwaltet den Scroll-Lock.
      * @param {boolean} open - True zum Öffnen, False zum Schließen.
@@ -539,6 +536,13 @@
      * @param {string} threadId - Die eindeutige ID für den Kommentar-Thread.
      */
     function renderCommentBox(threadId) {
+        commentBox('5739755899715584-proj', {
+            textColor: '#363636',
+            backgroundColor: null, // default transparent
+            fontFamily: 'VT323',
+            color: '#5a3f95',
+            lang: 'de'
+        });
 
         // 1. Zuerst den Container leeren
         tabContentArea.innerHTML = '';
