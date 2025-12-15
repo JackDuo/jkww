@@ -11,8 +11,6 @@ Das Ziel des Spiels ist es, Spielenden einen niedrigschwelligen Zugang zur Leben
 
 Das Spiel ist als HTML5-Anwendung direkt im Browser spielbar.
 
-<br>
-
  
 ### Hier gehts zum Spiel: **[(Portfolio-Ansicht)](https://jackduo.de/JKWW/)**
 *(Dies ist der empfohlene Link zur Portfolioseite inkl. Quellenverzeichnis)*
@@ -35,10 +33,10 @@ Hinweis: *Bei Bedarf, kann das Spiel eigenständig (dadurch im Vollbild) direkt 
 
 ## 📝 Kontext 🧑🏼‍🎓
 
-**Bachelor-Thesis:** „Games for Change“ in der Sozialen Arbeit am Beispiel von Wohnungslosigkeit - *Eine Konzeptarbeit eines Serious Games zur Sensibilisierung und Empathieförderung*
-**Autor:** Jason Braun
-**Hochschule:** Hochschule RheinMain
-**Studiengang:** Soziale Arbeit (B.A.)
+* **Bachelor-Thesis:** „Games for Change“ in der Sozialen Arbeit am Beispiel von Wohnungslosigkeit - *Eine Konzeptarbeit eines Serious Games zur Sensibilisierung und Empathieförderung*
+* **Autor:** Jason Braun
+* **Hochschule:** Hochschule RheinMain
+* **Studiengang:** Soziale Arbeit (B.A.)
 
 <br>
 
