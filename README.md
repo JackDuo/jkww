@@ -46,10 +46,11 @@ Hinweis: *Bei Bedarf, kann das Spiel eigenständig (dadurch im Vollbild) direkt 
 Dieses Repository beinhaltet auch begleitende oder vom Projekt unabhängige Dokumente oder Assets. 
 Der Build (das kompilierte HTML5-Spiel) liegt dabei in einem eigenen Ordner:
 
+* 📁 **/SozAGame**
+    * Hier befinden sich die `index.html` und die zugehörigen JavaScript/JSON-Dateien des exportierten Spiels.
 * 📁 **/JKWW**
     * Hier befindet sich der spezifische Ordner, der die Portfoliowebsite beinhaltet.
-* 📁 **/SGWohnungslosigkeit**
-    * Hier befinden sich die `index.html` und die zugehörigen JavaScript/JSON-Dateien des exportierten Spiels.
+
 
 <br>
 
