@@ -1,0 +1,38 @@
+    ___          ___           ___           ___     "Jede*r kann wohnungslos werden!"
+   /  /\        /__/|         /__/\         /__/\    
+  /  /:/       |  |:|        _\_ \:\       _\_ \:\     Wichtige Information:
+ /__/::\       |  |:|       /__/\ \:\     /__/\ \:\    Bei den vorliegenden Versionen
+ \__\/\:\    __|  |:|      _\_ \:\ \:\   _\_ \:\ \:\   handelt es sich lediglich um
+    \  \:\  /__/\_|:|____ /__/\ \:\ \:\ /__/\ \:\ \:\  Alternative-Builds. Das bedeutet,
+     \__\:\ \  \:\/:::::/ \  \:\ \:\/:/ \  \:\ \:\/:/  dass die vorliegenden, kompilierten
+     /  /:/  \  \::/~~~~   \  \:\ \::/   \  \:\ \::/   Programme als letzte Option, im
+    /__/:/    \  \:\        \  \:\/:/     \  \:\/:/    "Notfall" zur Verfügung gestellt werden.
+    \__\/      \  \:\        \  \::/       \  \::/           
+                \__\/         \__\/         \__\/       
+                
+Verwenden Sie die vorliegende Version bitte nur, sofern, 
+die Web-Version nicht abrufbar ist oder andere Konflikte
+die Verwendung blockieren. Die Versionen sind nicht getestet
+und können zu technischen Problemen und Fehlern führen.
+Die Web-Version ist verfügbar unter:   https://jkww.jackduo.de/.
+
+
+Inhaltliche Informationen:
+Es sind vier unterschiedliche Altervative-Versionen verfügbar.
+
+Zwei Windows Versionen:
+JKWW!-Windows-1.0.0-rc.zip
+JKWW!-WindowsInstaller-1.0.0-rc.exe
+	(Die .zip Version kann ohne Installation ausgeführt werden, 
+	erfordert jedoch das Entpacken und ausführen der .exe Datei.
+	Die "WindowsInstaller" Version führt zur Installation des Spiels.)
+	
+Eine Linux Version:
+JKWW!-Linux-1.0.0-rc.AppImage
+	(Die Datei muss als "ausführbar" eingestellt werden
+	und ist dann ausführbar.)
+	
+Eine MacOS Version:
+JKWW!-MacOS-1.0.0-rc.zip
+	(Hierzu sind - sofern notwendig - Instruktionen aus dem Internet
+	einzuholen.)

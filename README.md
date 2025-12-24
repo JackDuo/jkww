@@ -1,4 +1,4 @@
-# Serious Game: Sensibilisierung für Wohnungslosigkeit in der Sozialen Arbeit 
+# 📣 Serious Game: Sensibilisierung für Wohnungslosigkeit in der Sozialen Arbeit 📢
 
 Dieses Repository beinhaltet den Build des Serious Games (*kompilierte HTML5-Ordnerstruktur - textbasierter Quellcode ist nicht verfügbar, da "GDevelop" Visual-Coding nutzt*) sowie den Quellcode der Portfolioseite, die im Rahmen einer Bachelorarbeit im Studiengang *Soziale Arbeit* entwickelt wurden.
 Das Ziel des Spiels ist es, Spieler*innen einen niedrigschwelligen Zugang zur Lebensrealität wohnungsloser Menschen zu ermöglichen und Empathie sowie Problembewusstsein ("Awareness") zu fördern.
@@ -16,17 +16,7 @@ Das Spiel ist als HTML5-Anwendung direkt im Browser spielbar.
 
 <br>
 
-Hinweis: *Bei Bedarf kann das Spiel eigenständig (dadurch im Vollbild) direkt unter* [jkww.jackduo.de/JKWW/](https://jkww.jackduo.de/JKWW/) *aufgerufen werden.*
-
-<br>
-
-
-## 🛠️ Technologie & Entwicklung 🧑‍💻
-
-* **Engine:** GDevelop 5  
-* **Format:** HTML5  
-* **Grafikstil:** Pixel Art / Top-Down 
-* **Steuerung:** Tastatur (Pfeiltasten/WASD) & Maus *(Bisher keine anderen Eingabeoptionen)*
+Hinweis: *Bei Bedarf kann das Spiel isoliert (dadurch im Vollbild) direkt unter* [jkww.jackduo.de/JKWW/](https://jkww.jackduo.de/JKWW/) *aufgerufen werden.*
 
 <br>
 
@@ -39,6 +29,15 @@ Hinweis: *Bei Bedarf kann das Spiel eigenständig (dadurch im Vollbild) direkt u
 
 <br>
 
+## 🛠️ Technologie & Entwicklung 🧑‍💻
+
+* **Engine:** GDevelop 5  
+* **Format:** HTML5  
+* **Grafikstil:** Pixel Art / Top-Down 
+* **Steuerung:** Tastatur (Pfeiltasten/WASD) & Maus *(Bisher keine anderen Eingabeoptionen)*
+
+<br>
+
 
 ## 🗃️ Projektstruktur 🗂️
 
@@ -46,10 +45,12 @@ Dieses Repository beinhaltet auch begleitende oder vom Projekt unabhängige Doku
 Der Build (das kompilierte HTML5-Spiel) liegt dabei in einem eigenen Ordner:
 
 * 📁 **/JKWW**
-    * Hier befinden sich die `index.html` und die zugehörigen JavaScript/JSON-Dateien des exportierten Spiels.
+    * Hier befinden sich mitunter die `index.html` und die zugehörigen JavaScript/JSON-Dateien des exportierten Spiels.
 * 📁 **/index.html**
     * Die konkrete HTML-Datei, mit der die Portfolio-Seite angezeigt wird.
+* 📁 **/Alternative Versionen**
+    * Hier befinden sich alternative Versionen für Windows, Linux und MacOS. *Aufgrund fehlender Testung wird jedoch zur oben beschriebene Webversion geraten!*.
 
-<br>
+
 
 Hinweis: *Die `index.html` des Spiels lässt sich nicht klassisch öffnen, weswegen die Bereitstellung lediglich der Dokumentation dient. Zum spielen müssen die oben genannten Seiten aufgerufen werden, in denen das Spiel korrekt eingebunden ist.*
