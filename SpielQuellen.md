@@ -1,4 +1,4 @@
-# Im spiel verwendete Quellen
+# Im Spiel verwendete Quellen
 
 [1] Borstel, Dierk; Brückmann, Jennifer; Nübold, Laura; Pütter, Bastian; Sonnenberg, Tim (Hg.) (2025): Handbuch Wohnungs- und Obdachlosigkeit. 1st ed. 2025. Wiesbaden: Springer Fachmedien Wiesbaden; Imprint Springer VS.
 
