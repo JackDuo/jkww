@@ -1,4 +1,4 @@
-# 📣 Serious Game: Sensibilisierung für Wohnungslosigkeit in der Sozialen Arbeit 📢
+# ⤵️ Serious Game: Sensibilisierung für Wohnungslosigkeit in der Sozialen Arbeit 📢
 
 Dieses Repository beinhaltet den Build des Serious Games (*kompilierte HTML5-Ordnerstruktur - textbasierter Quellcode ist nicht verfügbar, da "GDevelop" Visual-Coding nutzt*) sowie den Quellcode der Portfolioseite, die im Rahmen einer Bachelorarbeit im Studiengang *Soziale Arbeit* entwickelt wurden.
 Das Ziel des Spiels ist es, Spieler*innen einen niedrigschwelligen Zugang zur Lebensrealität wohnungsloser Menschen zu ermöglichen und Empathie sowie Problembewusstsein ("Awareness") zu fördern.
