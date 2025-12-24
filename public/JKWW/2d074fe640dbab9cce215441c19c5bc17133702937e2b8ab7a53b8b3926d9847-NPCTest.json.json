@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "Oh Hi!\n[[Hast du ein bisschen Kleingeld?! |DialogueYes]] \n[[Tschüss. |DialogueNo]]",
+		"position": {
+			"x": 534,
+			"y": 224
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DialogueYes",
+		"tags": "",
+		"body": "Klar. <<money give 1.25>> Ich hab noch ein paar Münzen. \n<<pfand give 5>> Und noch ein Paar Flaschen, die ich eben abgeben wollte. \nDu siehst auch etwas hungrig aus. Ich hab auch noch was zu Essen! Nimm es gerne!\n<<give Sandwitch 5 DeleteNo>> *dir wurde gesundes Essen gegeben*\nIch hoffe, ich konnte dir damit etwas helfen! \n[[Answer:CloseTest|CloseTest]]",
+		"position": {
+			"x": 389,
+			"y": 509
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DialogueNo",
+		"tags": "",
+		"body": "Tschüss.\n[[Answer:CloseTest|CloseTest]]",
+		"position": {
+			"x": 711,
+			"y": 508
+		},
+		"colorID": 0
+	},
+	{
+		"title": "CloseTest",
+		"tags": "Close",
+		"body": "Empty Text",
+		"position": {
+			"x": 18,
+			"y": 342
+		},
+		"colorID": 5
+	}
+]

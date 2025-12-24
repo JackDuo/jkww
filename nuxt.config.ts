@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  css: ['~/assets/CSS/main.css'],
 
   modules: [
     '@nuxt/fonts',
@@ -15,11 +14,17 @@ export default defineNuxtConfig({
 
 
   app: {
-    baseURL: '/jasonbraun/', // WICHTIG: mit führendem und abschließendem Slash!
+    baseURL: '/', // WICHTIG: mit führendem und abschließendem Slash!
       buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
       head: {
+        htmlAttrs: {
+          lang: 'de', // Setzen Sie hier den Sprachcode ein, z. B. 'de' für Deutsch
+        },
+        title: 'Jede*r kann wohnungslos werden! | Bachelorarbeit Soziale Arbeit | Serious Game über Wohnungslosigkeit ', // Setzen des Standardtitels
         meta: [
-          { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { name: 'description', content: 'Dies ist die Website, auf der das Serious Game "Jede*r kann wohnungslos werden!" abgerufen werden kann, das im Rahmen einer Bachelorarbeit in Sozialer Arbeit entwickelt wurde.' }
         ],
       script: [
         {
@@ -28,12 +33,14 @@ export default defineNuxtConfig({
         }
       ],
         link: [
-          { rel: 'icon', type: 'image/x-icon', href: '/jasonbraun/favicon.ico' }
+          { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ],
     },
   },
-
+  target: 'static', // oder 'server', je nach deinem Setup
   ssr: false,       // falls du nur statisches SPA willst
-  
+
+
 })
+
 
